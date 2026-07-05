@@ -39,4 +39,9 @@ if (process.env.ANALYZE === 'true') {
   nextConfig = withBundleAnalyzer(nextConfig);
 }
 
+// Dev: allow external origins via env (ALLOWED_DEV_ORIGINS comma-separated)
+if (process.env.ALLOWED_DEV_ORIGINS) {
+  nextConfig.allowedDevOrigins = process.env.ALLOWED_DEV_ORIGINS.split(',').map(s => s.trim());
+}
+
 export default nextConfig;
