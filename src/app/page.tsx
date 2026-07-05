@@ -21,9 +21,8 @@ import Button from '@/components/ui/Button';
 import { request } from '@/lib/api-client';
 import { SkeletonCard } from '@/components/ui/Skeleton';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
-import fallbackProducts from '@/data/products.json';
-import fallbackCategories from '@/data/categories.json';
-import fallbackTestimonials from '@/data/testimonials.json';
+// Light-weight fallback — backend fail hone par hi use hota hai (poora products.json bundle na ho)
+import homeFallback from '@/data/home-fallback.json';
 
 const SEARCH_TYPES = ['Part Number', 'NSN', 'CAGE Code', 'Description', 'Manufacturer'];
 const CONDITIONS   = ['Any Condition', 'New', 'Overhauled', 'Refurbished', 'Used'];
@@ -48,11 +47,11 @@ export default function HomePage() {
   useEffect(() => {
     Promise.all([
       request<{ success: boolean; data: Product[]; pagination: unknown }>('/products?limit=8')
-        .catch(() => ({ success: false, data: fallbackProducts.slice(0, 8) as unknown as Product[], pagination: null })),
+        .catch(() => ({ success: false, data: homeFallback.products.slice(0, 8) as unknown as Product[], pagination: null })),
       request<{ success: boolean; data: Category[] }>('/categories')
-        .catch(() => ({ success: false, data: (fallbackCategories as any).fsgCategories?.slice(0, 6) as Category[] })),
+        .catch(() => ({ success: false, data: homeFallback.categories.fsgCategories.slice(0, 6) as unknown as Category[] })),
       request<{ success: boolean; data: Testimonial[] }>('/testimonials')
-        .catch(() => ({ success: false, data: fallbackTestimonials as unknown as Testimonial[], pagination: null })),
+        .catch(() => ({ success: false, data: homeFallback.testimonials as unknown as Testimonial[], pagination: null })),
     ]).then(([prods, cats, tests]) => {
       setProducts(prods.data);
       setCategories(cats.data);

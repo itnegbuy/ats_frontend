@@ -1,0 +1,8 @@
+[
+  { "id": "ind-01", "name": "Aerospace & Aviation", "slug": "aerospace", "icon": "plane", "description": "Commercial, cargo, and regional aircraft parts sourcing for OEMs and MRO facilities.", "partCount": 12500 },
+  { "id": "ind-02", "name": "Defense & Military", "slug": "defense", "icon": "shield", "description": "MIL-SPEC certified components for military airframes, ground vehicles, and defense systems.", "partCount": 9800 },
+  { "id": "ind-03", "name": "Aircraft Components & Accessories", "slug": "aircraft-components-accessories", "icon": "plane", "description": "Structural components, actuation systems, and avionics accessories for fixed and rotary-wing aircraft.", "partCount": 15200 },
+  { "id": "ind-04", "name": "Automotive & Ground Systems", "slug": "automotive", "icon": "car", "description": "Precision drivetrain, powertrain, and ground support equipment components.", "partCount": 6400 },
+  { "id": "ind-05", "name": "Electronics & Avionics", "slug": "electronics", "icon": "cpu", "description": "Avionics units, connectors, wiring harnesses, and electronic control modules.", "partCount": 8300 },
+  { "id": "ind-06", "name": "Communications & Radar", "slug": "communications", "icon": "radio", "description": "RF systems, radar assemblies, and communication equipment for aviation and defense.", "partCount": 5100 }
+]

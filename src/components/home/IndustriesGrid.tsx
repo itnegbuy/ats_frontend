@@ -6,7 +6,8 @@ import { Plane, Shield, Car, Heart, Cpu, Radio, Package } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { Industry } from '@/types';
 import { request } from '@/lib/api-client';
-import fallbackIndustries from '@/data/industries.json';
+// Light-weight fallback — sirf backend fail hone par use hota hai (poora industries.json bundle na ho)
+import fallbackIndustries from '@/data/industries-fallback.json';
 
 const INDUSTRY_ICONS: Record<string, React.ElementType> = {
   plane: Plane,

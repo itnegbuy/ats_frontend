@@ -1,6 +1,12 @@
 import type { NextConfig } from 'next';
 
 let nextConfig: NextConfig = {
+  experimental: {
+    // Heavy libs ke imports ko per-module resolve karta hai — module-graph aur build memory dono kam
+    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    // Next 16: build ke dauran peak memory usage kam karta hai
+    webpackMemoryOptimizations: true,
+  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'res.cloudinary.com' },

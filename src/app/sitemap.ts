@@ -1,5 +1,4 @@
 import type { MetadataRoute } from 'next';
-import productsData from '@/data/products.json';
 
 const BASE = 'https://aeroturbinespare.com';
 const API  = (process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:5000/api').replace(/\/$/, '');
@@ -25,7 +24,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/blog`,               lastModified: new Date(), changeFrequency: 'daily',   priority: 0.9 },
   ];
 
-  // Product pages (from static product data)
+  // Product pages (from static product data) — lazily imported so ye JSON module
+  // graph me eagerly na aaye
+  const { default: productsData } = await import('@/data/products.json');
   const productPages: MetadataRoute.Sitemap = (productsData as Array<{ id: string; updatedAt: string }>).map((p) => ({
     url: `${BASE}/catalog/${p.id}`,
     lastModified: new Date(p.updatedAt),

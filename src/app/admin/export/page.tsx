@@ -5,7 +5,6 @@ import {
   Download, Upload, FileJson, FileText, AlertCircle, CheckCircle,
   Loader2, RefreshCw, X, Pause, Play, Link, FileSpreadsheet, Plus,
 } from 'lucide-react';
-import * as XLSX from 'xlsx';
 import 'react-data-grid/lib/styles.css';
 import { request } from '@/lib/api-client';
 import useSpreadsheetEditor from '@/app/admin/hooks/useSpreadsheetEditor';
@@ -59,6 +58,8 @@ function downloadJSON(data: unknown, filename: string) {
 
 // ── SheetJS parser — handles .xlsx / .xls / .csv with quoted commas ──
 async function parseSpreadsheet(file: File): Promise<Record<string, unknown>[]> {
+  // SheetJS ko sirf yahin (jab file parse ho) load karo — initial bundle se bahar rahe
+  const XLSX = await import('xlsx');
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = (e) => {

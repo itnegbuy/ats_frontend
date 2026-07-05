@@ -6,7 +6,6 @@ import {
   Search, Loader2, Upload, FileSpreadsheet,
   List, FileJson, FileText,
 } from 'lucide-react';
-import * as XLSX from 'xlsx';
 import 'react-data-grid/lib/styles.css';
 import { request } from '@/lib/api-client';
 import { cn } from '@/lib/utils';
@@ -20,7 +19,9 @@ function toSlug(str: string): string {
   return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
-function parseSpreadsheet(file: File): Promise<Record<string, unknown>[]> {
+async function parseSpreadsheet(file: File): Promise<Record<string, unknown>[]> {
+  // SheetJS ko sirf yahin (jab file parse ho) load karo — initial bundle se bahar rahe
+  const XLSX = await import('xlsx');
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = (e) => {

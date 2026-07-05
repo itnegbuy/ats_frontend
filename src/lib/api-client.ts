@@ -6,13 +6,37 @@ import type {
 } from '@/types';
 import type { ChatConfig } from '@/types/chat';
 
-import productsData from '@/data/products.json';
-import categoriesData from '@/data/categories.json';
-import industriesData from '@/data/industries.json';
+// testimonials.json chhota (~2.6KB) hai aur real mode me bhi serve hota hai — static rakha.
 import testimonialsData from '@/data/testimonials.json';
-import usersData from '@/data/users.json';
 import { generateRFQId } from '@/lib/utils';
 import { refreshAccessToken, clearTokens } from './token';
+
+// ─── Lazy-loaded mock datasets ───────────────────────────────
+// Ye bade JSON (products ~64KB, categories ~15KB, industries, users) SIRF mock mode
+// me chahiye. Pehle ye statically import hote the aur api-client ko import karne wale
+// har bundle (~28 files) me inline ho jaate the → build memory multiply hoti thi.
+// Ab inhe on-demand load karte hain: real mode (USE_MOCK=false) me ye code path dead
+// hai, isliye ye JSON initial/shared chunks se poori tarah bahar rehte hain.
+let productsData: unknown[] = [];
+let categoriesData: unknown = {};
+let industriesData: unknown[] = [];
+let usersData: unknown[] = [];
+let _mockLoaded = false;
+
+async function ensureMockData(): Promise<void> {
+  if (_mockLoaded) return;
+  const [products, categories, industries, users] = await Promise.all([
+    import('@/data/products.json'),
+    import('@/data/categories.json'),
+    import('@/data/industries.json'),
+    import('@/data/users.json'),
+  ]);
+  productsData   = products.default as unknown[];
+  categoriesData = categories.default;
+  industriesData = industries.default as unknown[];
+  usersData      = users.default as unknown[];
+  _mockLoaded = true;
+}
 
 const USE_MOCK = process.env.NEXT_PUBLIC_USE_MOCK === 'true';
 const API_URL  = process.env.NEXT_PUBLIC_API_URL || '';
@@ -1092,6 +1116,7 @@ function getMockBackups(): BackupRecord[] {
 // ─── Public request function ─────────────────────────────────
 export async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
   if (USE_MOCK) {
+    await ensureMockData();
     await delay(DELAY);
     return mockRouter<T>(endpoint, options);
   }

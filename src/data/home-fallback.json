@@ -1,0 +1,92 @@
+{
+  "_comment": "Chhota curated fallback — home page par tabhi use hota hai jab backend fail ho jaaye (.catch). Poora products.json/categories.json bundle karne ki jagah ye light-weight sample rakha gaya hai. Shape asli data se match karta hai.",
+  "products": [
+    {
+      "id": "prod-001",
+      "nsn": "1560-00-178-9421",
+      "cage": "77272",
+      "partNumber": "GE-CF6-LPT-001",
+      "description": "Low-pressure turbine rotor blade manufactured from directionally solidified nickel superalloy for CF6-80C2 engines.",
+      "shortDescription": "LPT Rotor Blade CF6-80C2",
+      "fsg": "28",
+      "fsc": "2840",
+      "category": "Engines and Turbines",
+      "manufacturer": "General Electric",
+      "condition": "New",
+      "stockStatus": "In Stock",
+      "quantityAvailable": 24,
+      "unitPrice": 18500,
+      "currency": "USD",
+      "datasheetUrl": null,
+      "imageUrl": "/images/products/prod-001.jpg",
+      "crossReferences": ["GE-1234567-001"],
+      "specifications": { "material": "DS Nickel Superalloy", "weight": "0.85 lb" },
+      "tags": ["turbine blade", "CF6", "GE"],
+      "createdAt": "2024-03-15T08:00:00Z",
+      "updatedAt": "2025-01-10T12:00:00Z"
+    },
+    {
+      "id": "prod-002",
+      "nsn": "2840-01-432-7815",
+      "cage": "55284",
+      "partNumber": "PW-JT8D-HPT-BLD-A",
+      "description": "High-pressure turbine first-stage rotor blade for JT8D-217 engine series, single-crystal superalloy construction with internal cooling passages.",
+      "shortDescription": "HPT Stage 1 Blade JT8D",
+      "fsg": "28",
+      "fsc": "2840",
+      "category": "Engines and Turbines",
+      "manufacturer": "Pratt & Whitney",
+      "condition": "New",
+      "stockStatus": "In Stock",
+      "quantityAvailable": 16,
+      "unitPrice": 32000,
+      "currency": "USD",
+      "datasheetUrl": null,
+      "imageUrl": "/images/products/prod-002.jpg",
+      "crossReferences": ["PW-JT8D-BLD-A"],
+      "specifications": { "material": "Single-Crystal Superalloy", "weight": "0.72 lb" },
+      "tags": ["turbine blade", "JT8D", "Pratt & Whitney"],
+      "createdAt": "2024-04-02T08:00:00Z",
+      "updatedAt": "2025-01-08T12:00:00Z"
+    },
+    {
+      "id": "prod-003",
+      "nsn": "1660-01-201-5566",
+      "cage": "61234",
+      "partNumber": "HW-ACT-LG-330",
+      "description": "Landing gear hydraulic actuator assembly, corrosion-resistant, certified to FAA and EASA airworthiness standards.",
+      "shortDescription": "Landing Gear Actuator",
+      "fsg": "16",
+      "fsc": "1660",
+      "category": "Aircraft Components & Accessories",
+      "manufacturer": "Honeywell",
+      "condition": "Overhauled",
+      "stockStatus": "Limited",
+      "quantityAvailable": 5,
+      "unitPrice": 9400,
+      "currency": "USD",
+      "datasheetUrl": null,
+      "imageUrl": "/images/products/prod-003.jpg",
+      "crossReferences": ["HW-330-LG-ACT"],
+      "specifications": { "material": "Anodized Aluminium", "weight": "6.2 lb" },
+      "tags": ["landing gear", "actuator", "Honeywell"],
+      "createdAt": "2024-05-11T08:00:00Z",
+      "updatedAt": "2025-01-05T12:00:00Z"
+    }
+  ],
+  "categories": {
+    "fsgCategories": [
+      { "id": "cat-01", "name": "Aircraft Structural Components", "fsg": "15", "fsc": "1560", "description": "Airframe structural parts, bulkheads, ribs, spars, and skin panels for fixed-wing aircraft.", "icon": "plane", "partCount": 1840 },
+      { "id": "cat-02", "name": "Aircraft Components & Accessories", "fsg": "16", "fsc": "1660", "description": "Flight controls, landing gear components, hydraulic actuators, and airframe accessories.", "icon": "settings", "partCount": 2310 },
+      { "id": "cat-03", "name": "Gas Turbines & Jet Engines", "fsg": "28", "fsc": "2840", "description": "Turbine blades, combustion chambers, compressor stages, and complete engine modules.", "icon": "zap", "partCount": 3150 },
+      { "id": "cat-04", "name": "Engine Accessories", "fsg": "29", "fsc": "2915", "description": "Fuel controls, oil pumps, starters, ignition systems, and engine-mounted accessories.", "icon": "tool", "partCount": 1720 },
+      { "id": "cat-05", "name": "Bearings", "fsg": "31", "fsc": "3110", "description": "Precision anti-friction bearings, roller bearings, and bushings for aerospace applications.", "icon": "circle", "partCount": 980 },
+      { "id": "cat-06", "name": "Electrical & Electronic Equipment", "fsg": "59", "fsc": "5895", "description": "Avionics, wiring harnesses, connectors, and electronic control units.", "icon": "cpu", "partCount": 1450 }
+    ]
+  },
+  "testimonials": [
+    { "id": "test-01", "name": "James Whitfield", "title": "Director of Procurement", "company": "SkyTech MRO Solutions", "companyLogo": null, "quote": "AeroTurbineSpare consistently delivers on their 24-hour quote promise. The quality and traceability have been impeccable.", "rating": 5, "country": "United States", "date": "2025-04-12" },
+    { "id": "test-02", "name": "Capt. Ahmed Al-Rashidi", "title": "Technical Purchasing Manager", "company": "Gulf Air MRO", "companyLogo": null, "quote": "Their global network ensures we always get what we need, even for legacy aircraft. Documentation quality is always complete.", "rating": 5, "country": "Bahrain", "date": "2025-02-28" },
+    { "id": "test-03", "name": "Elena Novak", "title": "Supply Chain Lead", "company": "AeroLink Europe", "companyLogo": null, "quote": "Reliable sourcing and fast turnaround on hard-to-find components. A trusted partner for our fleet operations.", "rating": 5, "country": "Czech Republic", "date": "2025-01-19" }
+  ]
+}

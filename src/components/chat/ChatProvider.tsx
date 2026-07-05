@@ -1,12 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { useChat } from '@/hooks/useChat';
 import { useSiteConfig, DEFAULT_CHAT_CONFIG } from '@/hooks/useSiteConfig';
 import type { ChatConfig } from '@/types/chat';
-import ChatWidget from './ChatWidget';
 import ChatButton from './ChatButton';
 import WhatsAppButton from './WhatsAppButton';
+
+// ChatWidget (framer-motion + chat logic) ko lazy-load karo — initial bundle se bahar,
+// sirf tab load ho jab chat actually render ho
+const ChatWidget = dynamic(() => import('./ChatWidget'), { ssr: false });
 
 function getChatConfigSafe(config: { chat?: ChatConfig } | null): ChatConfig {
   return config?.chat || DEFAULT_CHAT_CONFIG;
