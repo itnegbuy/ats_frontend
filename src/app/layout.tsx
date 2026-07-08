@@ -19,9 +19,6 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://aeroturbinespare.com'),
-  verification: {
-    google: 'Ukz08W_xKDohmTpZtp7l4D0zSfCOqIGrW3kL8RVe3OM',
-  },
   title: {
     default: 'AeroTurbineSpare — Precision Aerospace Parts Sourcing',
     template: '%s | AeroTurbineSpare',
@@ -47,6 +44,9 @@ export const metadata: Metadata = {
     description: 'Precision Aerospace Parts Sourcing — Fast, Certified, Global',
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: 'Ukz08W_xKDohmTpZtp7l4D0zSfCOqIGrW3kL8RVe3OM',
+  },
 };
 
 export const viewport: Viewport = {
