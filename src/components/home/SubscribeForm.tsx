@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Mail, Check } from 'lucide-react';
+import { request } from '@/lib/api-client';
 import toast from 'react-hot-toast';
 
 export default function SubscribeForm() {
@@ -16,10 +17,18 @@ export default function SubscribeForm() {
       return;
     }
     setSending(true);
-    await new Promise((r) => setTimeout(r, 800));
-    setSending(false);
-    setSubscribed(true);
-    toast.success('Subscribed! Stay tuned for updates.');
+    try {
+      await request('/newsletter/subscribe', {
+        method: 'POST',
+        body: JSON.stringify({ email: email.trim() }),
+      });
+      setSubscribed(true);
+      toast.success('Subscribed! Stay tuned for updates.');
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : 'Failed to subscribe');
+    } finally {
+      setSending(false);
+    }
   };
 
   if (subscribed) {

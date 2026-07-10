@@ -154,6 +154,19 @@ async function realRequest<T>(endpoint: string, options?: RequestInit): Promise<
   else if (path === '/nav-categories')          realPath = '/nav-categories';
   else if (path === '/industries')              realPath = '/industries';
   else if (path === '/admin/categories')        realPath = '/admin/categories';
+  else if (path === '/contact/submit')          realPath = '/contacts';
+  else if (path === '/admin/contacts')          realPath = '/contacts';
+  else if (path.startsWith('/admin/contacts/') && method === 'GET') realPath = path.replace('/admin/contacts/', '/contacts/');
+  else if (path.startsWith('/admin/contacts/')) realPath = path.replace('/admin/contacts/', '/contacts/');
+  else if (path === '/admin/chat/conversations')        realPath = '/chat/conversations';
+  else if (path === '/admin/chat/conversations/unread')  realPath = '/chat/conversations/unread';
+  else if (path.startsWith('/admin/chat/conversations/')) realPath = path.replace('/admin/chat/conversations/', '/chat/conversations/');
+  else if (path === '/admin/knowledge-base')      realPath = '/knowledge-base';
+  else if (path.startsWith('/admin/knowledge-base/')) realPath = path.replace('/admin/knowledge-base/', '/knowledge-base/');
+  else if (path === '/newsletter/subscribe')          realPath = '/newsletter/subscribe';
+  else if (path === '/admin/newsletter')              realPath = '/newsletter';
+  else if (path === '/admin/newsletter/stats')        realPath = '/newsletter/stats';
+  else if (path.startsWith('/admin/newsletter/'))     realPath = path.replace('/admin/newsletter/', '/newsletter/');
   else if (path.startsWith('/admin/categories/')) realPath = path;
 
   const finalEndpoint = realPath + (qs ? '?' + qs : '');
@@ -503,6 +516,101 @@ function mockRouter<T>(endpoint: string, options?: RequestInit): T {
   // ── TESTIMONIALS ──────────────────────────────────────────
   if (path === '/testimonials') {
     return { success: true, data: testimonialsData as unknown as Testimonial[] } as T;
+  }
+
+  // ── NEWSLETTER (mock mode) ────────────────────────────────
+  if (path === '/newsletter/subscribe' && method === 'POST') {
+    const { email } = JSON.parse(options?.body as string || '{}');
+    const subs = ls<Record<string, unknown>[]>('ats_newsletter', []);
+    const existing = subs.find((s) => s.email === email);
+    if (existing) {
+      if (existing.isActive === false) {
+        const updated = subs.map((s) => s.email === email ? { ...s, isActive: true } : s);
+        lsSet('ats_newsletter', updated);
+        return { success: true, message: 'Subscription reactivated' } as T;
+      }
+      return { success: true, message: 'Already subscribed' } as T;
+    }
+    const sub = { id: 'nl-' + Date.now(), email, isActive: true, createdAt: new Date().toISOString() };
+    lsSet('ats_newsletter', [sub, ...subs]);
+    return { success: true, message: 'Subscribed successfully' } as T;
+  }
+
+  if (path === '/admin/newsletter/stats' && method === 'GET') {
+    const subs = ls<Record<string, unknown>[]>('ats_newsletter', []);
+    const total = subs.length;
+    const active = subs.filter((s) => s.isActive !== false).length;
+    return { success: true, data: { total, active, inactive: total - active } } as T;
+  }
+
+  if (path === '/admin/newsletter' && method === 'GET') {
+    let subs = ls<Record<string, unknown>[]>('ats_newsletter', []);
+    const search = params.get('search');
+    const isActive = params.get('isActive');
+    if (isActive) subs = subs.filter((s) => s.isActive === (isActive === 'true'));
+    if (search) subs = subs.filter((s) => String(s.email).toLowerCase().includes(search.toLowerCase()));
+    return { success: true, data: subs, pagination: { total: subs.length, page: 1, limit: 200, totalPages: 1 } } as T;
+  }
+
+  if (path.startsWith('/admin/newsletter/') && method === 'DELETE') {
+    const id = path.split('/admin/newsletter/')[1];
+    const subs = ls<Record<string, unknown>[]>('ats_newsletter', []).filter((s) => s.id !== id);
+    lsSet('ats_newsletter', subs);
+    return { success: true, message: 'Subscriber deleted' } as T;
+  }
+
+  // ── CONTACT (mock mode) ────────────────────────────────────
+  if (path === '/contact/submit' && method === 'POST') {
+    const body = JSON.parse(options?.body as string || '{}');
+    const submission = {
+      id: 'contact-' + Date.now(),
+      ...body,
+      status: 'Unread',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+    };
+    const existing = ls<Record<string, unknown>[]>('ats_contact_submissions', []);
+    lsSet('ats_contact_submissions', [submission, ...existing]);
+    return { success: true, data: submission, message: 'Message sent successfully' } as T;
+  }
+
+  if (path === '/admin/contacts' && method === 'GET') {
+    const page  = parseInt(params.get('page') || '1', 10);
+    const limit = parseInt(params.get('limit') || '20', 10);
+    const status = params.get('status');
+    const search = params.get('search');
+    let submissions = ls<Record<string, unknown>[]>('ats_contact_submissions', []);
+    if (status) submissions = submissions.filter((s) => s.status === status);
+    if (search) {
+      const q = search.toLowerCase();
+      submissions = submissions.filter((s) =>
+        String(s.name).toLowerCase().includes(q) ||
+        String(s.email).toLowerCase().includes(q) ||
+        String(s.subject).toLowerCase().includes(q) ||
+        String(s.message).toLowerCase().includes(q)
+      );
+    }
+    const total = submissions.length;
+    const data  = submissions.slice((page - 1) * limit, page * limit);
+    return { success: true, data, pagination: { total, page, limit, totalPages: Math.ceil(total / limit) } } as T;
+  }
+
+  if (path.startsWith('/admin/contacts/') && method === 'GET') {
+    const id = path.split('/admin/contacts/')[1];
+    const submissions = ls<Record<string, unknown>[]>('ats_contact_submissions', []);
+    const submission = submissions.find((s) => s.id === id);
+    if (!submission) throw new Error('Submission not found');
+    return { success: true, data: submission } as T;
+  }
+
+  if (path.startsWith('/admin/contacts/') && path.endsWith('/status') && method === 'PUT') {
+    const id = path.split('/admin/contacts/')[1].replace('/status', '');
+    const body = JSON.parse(options?.body as string || '{}');
+    const submissions = ls<Record<string, unknown>[]>('ats_contact_submissions', []).map((s) =>
+      s.id === id ? { ...s, ...body, updatedAt: new Date().toISOString() } : s
+    );
+    lsSet('ats_contact_submissions', submissions);
+    return { success: true, message: 'Status updated' } as T;
   }
 
   // ── RFQ ───────────────────────────────────────────────────
@@ -884,6 +992,116 @@ function mockRouter<T>(endpoint: string, options?: RequestInit): T {
     lsSet('ats_site_config', updated);
     appendAuditLog({ action: 'UPDATE_SITE_CONFIG', resource: 'branding', details: 'Site config updated' });
     return { success: true, data: updated, message: 'Site configuration saved' } as T;
+  }
+
+  // ── CHAT (mock mode) ─────────────────────────────────────────
+  if (path === '/admin/chat/conversations' && method === 'GET') {
+    let convs = ls<Record<string, unknown>[]>('ats_chat_conversations', []);
+    const status = params.get('status');
+    const search = params.get('search');
+    if (status && status !== 'all') {
+      if (status === 'unread') convs = convs.filter((c) => c.isUnread);
+      else convs = convs.filter((c) => c.status === status);
+    }
+    if (search) {
+      const q = search.toLowerCase();
+      convs = convs.filter((c) =>
+        String(c.visitorName).toLowerCase().includes(q) ||
+        String(c.lastMessage).toLowerCase().includes(q) ||
+        String(c.visitorEmail).toLowerCase().includes(q)
+      );
+    }
+    const pageNum = parseInt(params.get('page') || '1', 10);
+    const limitNum = parseInt(params.get('limit') || '20', 10);
+    const unreadCount = convs.filter((c) => c.isUnread).length;
+    const total = convs.length;
+    const data = convs.slice((pageNum - 1) * limitNum, pageNum * limitNum);
+    return { success: true, data, unreadCount, pagination: { total, page: pageNum, limit: limitNum, totalPages: Math.ceil(total / limitNum) } } as T;
+  }
+
+  if (path.startsWith('/admin/chat/conversations/unread') && method === 'GET') {
+    const convs = ls<Record<string, unknown>[]>('ats_chat_conversations', []);
+    const unreadCount = convs.filter((c) => c.isUnread).length;
+    return { success: true, data: { unreadCount } } as T;
+  }
+
+  if (path.match(/\/admin\/chat\/conversations\/[^/]+\/messages/) && method === 'GET') {
+    const convId = path.split('/admin/chat/conversations/')[1].replace('/messages', '');
+    const msgs = ls<Record<string, unknown>[]>(`ats_chat_messages_${convId}`, []);
+    return { success: true, data: msgs, pagination: { total: msgs.length, page: 1, limit: 50, totalPages: 1 } } as T;
+  }
+
+  if (path.match(/\/admin\/chat\/conversations\/[^/]+$/) && method === 'GET') {
+    const convId = path.split('/admin/chat/conversations/')[1];
+    const convs = ls<Record<string, unknown>[]>('ats_chat_conversations', []);
+    const conversation = convs.find((c) => c.id === convId);
+    if (!conversation) throw new Error('Conversation not found');
+    const messages = ls<Record<string, unknown>[]>(`ats_chat_messages_${convId}`, []);
+    return { success: true, conversation, messages } as T;
+  }
+
+  if (path.match(/\/admin\/chat\/conversations\/[^/]+\/messages/) && method === 'POST') {
+    const convId = path.split('/admin/chat/conversations/')[1].replace('/messages', '');
+    const { text } = JSON.parse(options?.body as string || '{}');
+    const msg = { id: 'admin-' + Date.now(), conversationId: convId, sender: 'admin', type: 'text', text, createdAt: new Date().toISOString() };
+    const existing = ls<Record<string, unknown>[]>(`ats_chat_messages_${convId}`, []);
+    lsSet(`ats_chat_messages_${convId}`, [...existing, msg]);
+    const convs = ls<Record<string, unknown>[]>('ats_chat_conversations', []).map((c) =>
+      c.id === convId ? { ...c, lastMessage: text, lastMessageAt: msg.createdAt, messageCount: (c.messageCount as number || 0) + 1 } : c
+    );
+    lsSet('ats_chat_conversations', convs);
+    return { success: true, data: msg } as T;
+  }
+
+  if (path.match(/\/admin\/chat\/conversations\/[^/]+\/status/) && method === 'PUT') {
+    const convId = path.split('/admin/chat/conversations/')[1].replace('/status', '');
+    const { status } = JSON.parse(options?.body as string || '{}');
+    const convs = ls<Record<string, unknown>[]>('ats_chat_conversations', []).map((c) =>
+      c.id === convId ? { ...c, status } : c
+    );
+    lsSet('ats_chat_conversations', convs);
+    return { success: true, message: 'Status updated' } as T;
+  }
+
+  // ── KNOWLEDGE BASE (mock mode) ─────────────────────────────
+  if (path === '/admin/knowledge-base' && method === 'GET') {
+    let items = ls<Record<string, unknown>[]>('ats_knowledge_base', []);
+    const category = params.get('category');
+    const search = params.get('search');
+    if (category) items = items.filter((i) => i.category === category);
+    if (search) {
+      const q = search.toLowerCase();
+      items = items.filter((i) =>
+        String(i.question).toLowerCase().includes(q) ||
+        String(i.answer).toLowerCase().includes(q)
+      );
+    }
+    return { success: true, data: items, pagination: { total: items.length, page: 1, limit: 200, totalPages: 1 } } as T;
+  }
+
+  if (path === '/admin/knowledge-base' && method === 'POST') {
+    const body = JSON.parse(options?.body as string || '{}');
+    const entry = { id: 'kb-' + Date.now(), ...body, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString() };
+    const existing = ls<Record<string, unknown>[]>('ats_knowledge_base', []);
+    lsSet('ats_knowledge_base', [...existing, entry]);
+    return { success: true, data: entry } as T;
+  }
+
+  if (path.startsWith('/admin/knowledge-base/') && method === 'PUT') {
+    const id = path.split('/admin/knowledge-base/')[1];
+    const body = JSON.parse(options?.body as string || '{}');
+    const items = ls<Record<string, unknown>[]>('ats_knowledge_base', []).map((i) =>
+      i.id === id ? { ...i, ...body, updatedAt: new Date().toISOString() } : i
+    );
+    lsSet('ats_knowledge_base', items);
+    return { success: true, message: 'Entry updated' } as T;
+  }
+
+  if (path.startsWith('/admin/knowledge-base/') && method === 'DELETE') {
+    const id = path.split('/admin/knowledge-base/')[1];
+    const items = ls<Record<string, unknown>[]>('ats_knowledge_base', []).filter((i) => i.id !== id);
+    lsSet('ats_knowledge_base', items);
+    return { success: true, message: 'Entry deleted' } as T;
   }
 
   // ── ADMIN PARTS CRUD ─────────────────────────────────────────

@@ -6,7 +6,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import {
   LayoutDashboard, Users, FileText, Package,
   Download, Settings, ChevronRight, LogOut,
-  Shield, Bell, Palette, Layers, MessageCircle, BookOpen,
+  Shield, Bell, Palette, Layers, MessageCircle, BookOpen, Mail,
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import AeroLogo from '@/components/branding/AeroLogo';
@@ -20,6 +20,9 @@ const ADMIN_NAV = [
   { href: '/admin/parts',      icon: Package,         label: 'Parts Catalog'   },
   { href: '/admin/branding',   icon: Palette,         label: 'Branding & Hero' },
   { href: '/admin/export',          icon: Download,        label: 'Import / Export'       },
+  { href: '/admin/newsletter',      icon: Mail,            label: 'Newsletter'            },
+  { href: '/admin/inventory',       icon: Package,         label: 'Inventory Submissions' },
+  { href: '/admin/contacts',        icon: Mail,            label: 'Contact Forms'         },
   { href: '/admin/chat',            icon: MessageCircle,   label: 'Chat Inbox'            },
   { href: '/admin/knowledge-base',  icon: BookOpen,        label: 'Knowledge Base'        },
 ];

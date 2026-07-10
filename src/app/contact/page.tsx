@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import toast from 'react-hot-toast';
 import { useState } from 'react';
+import { request } from '@/lib/api-client';
 import {
   MapPin, Phone, Mail, Clock,
   MessageSquare, FileText, Wrench, Shield,
@@ -86,16 +87,18 @@ export default function ContactPage() {
     },
   });
 
-  const onSubmit = async (_data: ContactFormValues) => {
+  const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
     try {
-      // Mock submission delay
-      await new Promise((r) => setTimeout(r, 1200));
+      await request('/contact/submit', {
+        method: 'POST',
+        body: JSON.stringify(data),
+      });
       toast.success('Message sent! We\'ll be in touch within 1 business day.');
       setSubmitted(true);
       reset();
-    } catch {
-      toast.error('Failed to send message. Please try again or call us directly.');
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : 'Failed to send message. Please try again or call us directly.');
     } finally {
       setIsSubmitting(false);
     }

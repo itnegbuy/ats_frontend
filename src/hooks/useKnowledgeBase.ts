@@ -1,46 +1,63 @@
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
+import { request } from '@/lib/api-client';
 import type { KnowledgeBaseItem, KBCategory } from '@/types/chat';
-import { getKnowledgeBase, saveKnowledgeBase } from '@/lib/chat-knowledge';
 
 export function useKnowledgeBase() {
   const [items, setItems] = useState<KnowledgeBaseItem[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setItems(getKnowledgeBase());
-    setLoading(false);
+    (async () => {
+      try {
+        const res = await request<{ success: boolean; data: KnowledgeBaseItem[] }>('/admin/knowledge-base');
+        setItems(res.data);
+      } catch {
+        setItems([]);
+      } finally {
+        setLoading(false);
+      }
+    })();
   }, []);
 
-  const addItem = useCallback((item: Omit<KnowledgeBaseItem, 'id' | 'createdAt' | 'updatedAt'>) => {
-    const newItem: KnowledgeBaseItem = {
-      ...item,
-      id: `kb-${Date.now()}`,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    };
-    const updated = [...items, newItem];
-    setItems(updated);
-    saveKnowledgeBase(updated);
-    return newItem;
-  }, [items]);
+  const addItem = useCallback(async (item: Omit<KnowledgeBaseItem, 'id' | 'createdAt' | 'updatedAt'>) => {
+    try {
+      const res = await request<{ success: boolean; data: KnowledgeBaseItem }>('/admin/knowledge-base', {
+        method: 'POST',
+        body: JSON.stringify(item),
+      });
+      setItems((prev) => [...prev, res.data]);
+      return res.data;
+    } catch {
+      return null;
+    }
+  }, []);
 
-  const updateItem = useCallback((id: string, updates: Partial<KnowledgeBaseItem>) => {
-    const updated = items.map((item) =>
-      item.id === id
-        ? { ...item, ...updates, updatedAt: new Date().toISOString() }
-        : item,
-    );
-    setItems(updated);
-    saveKnowledgeBase(updated);
-  }, [items]);
+  const updateItem = useCallback(async (id: string, updates: Partial<KnowledgeBaseItem>) => {
+    try {
+      await request(`/admin/knowledge-base/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify(updates),
+      });
+      setItems((prev) =>
+        prev.map((item) =>
+          item.id === id ? { ...item, ...updates, updatedAt: new Date().toISOString() } : item,
+        ),
+      );
+    } catch {
+      // silent
+    }
+  }, []);
 
-  const deleteItem = useCallback((id: string) => {
-    const updated = items.filter((item) => item.id !== id);
-    setItems(updated);
-    saveKnowledgeBase(updated);
-  }, [items]);
+  const deleteItem = useCallback(async (id: string) => {
+    try {
+      await request(`/admin/knowledge-base/${id}`, { method: 'DELETE' });
+      setItems((prev) => prev.filter((item) => item.id !== id));
+    } catch {
+      // silent
+    }
+  }, []);
 
   const getItem = useCallback((id: string) => {
     return items.find((item) => item.id === id) || null;
