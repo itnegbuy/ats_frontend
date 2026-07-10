@@ -72,7 +72,7 @@ function partBodyToDB(body: Record<string, unknown>): Record<string, unknown> {
 }
 
 // ─── Real API call ──────────────────────────────────────────
-async function realRequest<T>(endpoint: string, options?: RequestInit, opts?: { publicEndpoint?: boolean }): Promise<T> {
+async function realRequest<T>(endpoint: string, options?: RequestInit): Promise<T> {
   const method = options?.method?.toUpperCase() || 'GET';
   const [path, qs] = endpoint.split('?');
 
@@ -238,8 +238,9 @@ async function realRequest<T>(endpoint: string, options?: RequestInit, opts?: { 
 
     // Refresh failed — clear session
     clearTokens();
-    // Public endpoints pe 401 aane par redirect nahi, bas error throw
-    if (!opts?.publicEndpoint) {
+    // Sirf tab redirect karo jab user ke paas session tha (token expired)
+    // Bina session ke 401 public endpoints ke liye normal hai — redirect mat karo
+    if (session) {
       if (typeof window !== 'undefined') {
         if (!window.location.pathname.startsWith('/login') && !window.location.pathname.startsWith('/register')) {
           window.location.href = '/login';
@@ -1136,16 +1137,11 @@ function getMockBackups(): BackupRecord[] {
 }
 
 // ─── Public request function ─────────────────────────────────
-const PUBLIC_ENDPOINTS = new Set([
-  '/products', '/categories', '/testimonials', '/nav-categories',
-  '/config', '/industries', '/health', '/branding',
-]);
-
 export async function request<T>(endpoint: string, options?: RequestInit): Promise<T> {
   if (USE_MOCK) {
     await ensureMockData();
     await delay(DELAY);
     return mockRouter<T>(endpoint, options);
   }
-  return realRequest<T>(endpoint, options, { publicEndpoint: PUBLIC_ENDPOINTS.has(endpoint.split('?')[0]) });
+  return realRequest<T>(endpoint, options);
 }
