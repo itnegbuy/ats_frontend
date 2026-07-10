@@ -55,6 +55,7 @@ export default function SubscribeForm() {
               placeholder="Enter your work email"
               className="flex-1 px-5 py-3.5 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-white/30 text-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5]/50 focus:border-[#4F46E5] transition-all"
               required
+              suppressHydrationWarning
             />
             <button
               type="submit"

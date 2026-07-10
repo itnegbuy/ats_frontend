@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
+import Script from 'next/script';
 import { Toaster } from 'react-hot-toast';
 import QueryProvider from '@/providers/QueryProvider';
 import DataRefreshProvider from '@/providers/DataRefreshProvider';
@@ -55,6 +56,11 @@ export const metadata: Metadata = {
     description: 'Precision Aerospace Parts Sourcing — Fast, Certified, Global. ISO 9001 & AS9120 Certified.',
     images: ['/og-image.svg'],
   },
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   robots: { index: true, follow: true },
   verification: {
     google: 'Ukz08W_xKDohmTpZtp7l4D0zSfCOqIGrW3kL8RVe3OM',
@@ -63,6 +69,9 @@ export const metadata: Metadata = {
     'google-site-verification': 'Ukz08W_xKDohmTpZtp7l4D0zSfCOqIGrW3kL8RVe3OM',
   },
 };
+
+
+
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -97,6 +106,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             error:   { iconTheme: { primary: '#E8751A', secondary: '#fff' } },
           }}
         />
+
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-QH0HYG18PL" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-QH0HYG18PL');
+          `}
+        </Script>
       </body>
     </html>
   );
