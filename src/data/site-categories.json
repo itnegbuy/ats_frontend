@@ -8,7 +8,13 @@
     "partCount": 5840,
     "image": "/images/categories/lm2500.jpg",
     "icon": "plane",
-    "features": ["Hot section blades & nozzles", "Fuel manifold assemblies", "Bearing housings & seals", "Lube oil pump modules", "Combustion chamber liners"]
+    "features": [
+      "Hot section blades & nozzles",
+      "Fuel manifold assemblies",
+      "Bearing housings & seals",
+      "Lube oil pump modules",
+      "Combustion chamber liners"
+    ]
   },
   {
     "id": "cat-lm6000",
@@ -19,7 +25,13 @@
     "partCount": 4920,
     "image": "/images/categories/lm6000.jpg",
     "icon": "plane",
-    "features": ["Power turbine vane assemblies", "Compressor rotor blades", "Fuel metering units", "Lube oil cooler cores", "Turbine shroud segments"]
+    "features": [
+      "Power turbine vane assemblies",
+      "Compressor rotor blades",
+      "Fuel metering units",
+      "Lube oil cooler cores",
+      "Turbine shroud segments"
+    ]
   },
   {
     "id": "cat-lm9000",
@@ -30,7 +42,13 @@
     "partCount": 3210,
     "image": "/images/categories/lm9000.jpg",
     "icon": "plane",
-    "features": ["Stage 1 turbine blades", "Combustion section liners", "Compressor discharge seals", "Variable guide vane actuators", "Thermocouple harness assemblies"]
+    "features": [
+      "Stage 1 turbine blades",
+      "Combustion section liners",
+      "Compressor discharge seals",
+      "Variable guide vane actuators",
+      "Thermocouple harness assemblies"
+    ]
   },
   {
     "id": "cat-lms100",
@@ -41,7 +59,13 @@
     "partCount": 2180,
     "image": "/images/categories/lms100.jpg",
     "icon": "plane",
-    "features": ["Intercooler core assemblies", "Power turbine blade sets", "Fuel control valve assemblies", "Bearing housing kits", "Interstage seal assemblies"]
+    "features": [
+      "Intercooler core assemblies",
+      "Power turbine blade sets",
+      "Fuel control valve assemblies",
+      "Bearing housing kits",
+      "Interstage seal assemblies"
+    ]
   },
   {
     "id": "cat-lm500",
@@ -52,7 +76,13 @@
     "partCount": 1560,
     "image": "/images/categories/lm500.jpg",
     "icon": "anchor",
-    "features": ["Compressor impeller assemblies", "Fuel nozzle assemblies", "Oil sump seal kits", "Reduction gear bearing sets", "Exhaust collector assemblies"]
+    "features": [
+      "Compressor impeller assemblies",
+      "Fuel nozzle assemblies",
+      "Oil sump seal kits",
+      "Reduction gear bearing sets",
+      "Exhaust collector assemblies"
+    ]
   },
   {
     "id": "cat-lm1600",
@@ -63,7 +93,13 @@
     "partCount": 1340,
     "image": "/images/categories/lm1600.jpg",
     "icon": "plane",
-    "features": ["Compressor blade sets", "Turbine vane assemblies", "Fuel manifold assemblies", "Bearing assemblies", "Accessory gearbox assemblies"]
+    "features": [
+      "Compressor blade sets",
+      "Turbine vane assemblies",
+      "Fuel manifold assemblies",
+      "Bearing assemblies",
+      "Accessory gearbox assemblies"
+    ]
   },
   {
     "id": "cat-ge-frame",
@@ -74,7 +110,13 @@
     "partCount": 8720,
     "image": "/images/categories/ge-frame.jpg",
     "icon": "settings",
-    "features": ["Stage 1 bucket assemblies", "Combustion liner sets", "Transition piece assemblies", "Cross-fire tube assemblies", "Inlet guide vane assemblies"]
+    "features": [
+      "Stage 1 bucket assemblies",
+      "Combustion liner sets",
+      "Transition piece assemblies",
+      "Cross-fire tube assemblies",
+      "Inlet guide vane assemblies"
+    ]
   },
   {
     "id": "cat-siemens",
@@ -85,7 +127,13 @@
     "partCount": 6450,
     "image": "/images/categories/siemens.jpg",
     "icon": "settings",
-    "features": ["SGT-400 combustion liners", "SGT-600 fuel nozzle assemblies", "SGT-700 turbine blade sets", "SGT-800 compressor vanes", "SGT-A45 power turbine discs"]
+    "features": [
+      "SGT-400 combustion liners",
+      "SGT-600 fuel nozzle assemblies",
+      "SGT-700 turbine blade sets",
+      "SGT-800 compressor vanes",
+      "SGT-A45 power turbine discs"
+    ]
   },
   {
     "id": "cat-alstom",
@@ -96,7 +144,13 @@
     "partCount": 3890,
     "image": "/images/categories/alstom.jpg",
     "icon": "settings",
-    "features": ["GT13E2 combustion chambers", "GT11N2 turbine blade sets", "GT8C2 fuel nozzle assemblies", "GT24 compressor stator vanes", "GT26 fuel lance assemblies"]
+    "features": [
+      "GT13E2 combustion chambers",
+      "GT11N2 turbine blade sets",
+      "GT8C2 fuel nozzle assemblies",
+      "GT24 compressor stator vanes",
+      "GT26 fuel lance assemblies"
+    ]
   },
   {
     "id": "cat-ansaldo",
@@ -107,7 +161,13 @@
     "partCount": 2740,
     "image": "/images/categories/ansaldo.jpg",
     "icon": "settings",
-    "features": ["AE64.3A combustion liners", "AE94.2 turbine blade assemblies", "AE64.3A fuel nozzle sets", "AE94.3A compressor stators", "AE94.2 lube oil modules"]
+    "features": [
+      "AE64.3A combustion liners",
+      "AE94.2 turbine blade assemblies",
+      "AE64.3A fuel nozzle sets",
+      "AE94.3A compressor stators",
+      "AE94.2 lube oil modules"
+    ]
   },
   {
     "id": "cat-solar",
@@ -118,7 +178,13 @@
     "partCount": 4560,
     "image": "/images/categories/solar.jpg",
     "icon": "settings",
-    "features": ["Taurus 60 combustion liners", "Titan 130 turbine blade sets", "Mars 100 fuel nozzle assemblies", "Taurus 70 compressor rotors", "Saturn 20 turbine nozzle rings"]
+    "features": [
+      "Taurus 60 combustion liners",
+      "Titan 130 turbine blade sets",
+      "Mars 100 fuel nozzle assemblies",
+      "Taurus 70 compressor rotors",
+      "Saturn 20 turbine nozzle rings"
+    ]
   },
   {
     "id": "cat-rolls-royce",
@@ -129,7 +195,13 @@
     "partCount": 3120,
     "image": "/images/categories/rolls-royce.jpg",
     "icon": "settings",
-    "features": ["Avon turbine blades", "RB211 combustion chambers", "Trent fuel system components", "MT30 bearing assemblies", "Industrial control modules"]
+    "features": [
+      "Avon turbine blades",
+      "RB211 combustion chambers",
+      "Trent fuel system components",
+      "MT30 bearing assemblies",
+      "Industrial control modules"
+    ]
   },
   {
     "id": "cat-blades-nozzles",
@@ -140,7 +212,13 @@
     "partCount": 12400,
     "image": "/images/categories/blades.jpg",
     "icon": "activity",
-    "features": ["Stage 1-4 turbine blades", "Nozzle guide vane assemblies", "Single-crystal & DS alloys", "Blade shroud assemblies", "Vane segment sets"]
+    "features": [
+      "Stage 1-4 turbine blades",
+      "Nozzle guide vane assemblies",
+      "Single-crystal & DS alloys",
+      "Blade shroud assemblies",
+      "Vane segment sets"
+    ]
   },
   {
     "id": "cat-combustion",
@@ -151,7 +229,13 @@
     "partCount": 8930,
     "image": "/images/categories/combustion.jpg",
     "icon": "flame",
-    "features": ["Combustion liner assemblies", "Cross-fire tube assemblies", "Fuel nozzle tip assemblies", "Spark plug igniter assemblies", "Flame detector sensor assemblies"]
+    "features": [
+      "Combustion liner assemblies",
+      "Cross-fire tube assemblies",
+      "Fuel nozzle tip assemblies",
+      "Spark plug igniter assemblies",
+      "Flame detector sensor assemblies"
+    ]
   },
   {
     "id": "cat-fuel-systems",
@@ -162,7 +246,13 @@
     "partCount": 5670,
     "image": "/images/categories/fuel-systems.jpg",
     "icon": "fuel",
-    "features": ["High-pressure fuel pump assemblies", "Fuel metering valve assemblies", "Fuel manifold distribution blocks", "Fuel pressure regulator assemblies", "Fuel shut-off valve actuators"]
+    "features": [
+      "High-pressure fuel pump assemblies",
+      "Fuel metering valve assemblies",
+      "Fuel manifold distribution blocks",
+      "Fuel pressure regulator assemblies",
+      "Fuel shut-off valve actuators"
+    ]
   },
   {
     "id": "cat-transition",
@@ -173,7 +263,13 @@
     "partCount": 2340,
     "image": "/images/categories/transition.jpg",
     "icon": "settings",
-    "features": ["Transition piece assemblies", "Exhaust diffuser sections", "Connecting duct hardware", "Cooling air seal assemblies", "Expansion joint assemblies"]
+    "features": [
+      "Transition piece assemblies",
+      "Exhaust diffuser sections",
+      "Connecting duct hardware",
+      "Cooling air seal assemblies",
+      "Expansion joint assemblies"
+    ]
   },
   {
     "id": "cat-control-systems",
@@ -184,7 +280,13 @@
     "partCount": 7890,
     "image": "/images/categories/control-systems.jpg",
     "icon": "cpu",
-    "features": ["Mark V speedtronic control cards", "Mark VI turbine controller modules", "Mark VIe safety over-ride boards", "EX2100 excitation control modules", "I/O processor boards"]
+    "features": [
+      "Mark V speedtronic control cards",
+      "Mark VI turbine controller modules",
+      "Mark VIe safety over-ride boards",
+      "EX2100 excitation control modules",
+      "I/O processor boards"
+    ]
   },
   {
     "id": "cat-bently-nevada",
@@ -195,7 +297,13 @@
     "partCount": 4560,
     "image": "/images/categories/bently-nevada.jpg",
     "icon": "radio",
-    "features": ["3300 XL proximity probes", "3500/42M vibration monitors", "3500/20 interface modules", "3300 position monitor systems", "3500/15 power supply modules"]
+    "features": [
+      "3300 XL proximity probes",
+      "3500/42M vibration monitors",
+      "3500/20 interface modules",
+      "3300 position monitor systems",
+      "3500/15 power supply modules"
+    ]
   },
   {
     "id": "cat-sensors",
@@ -206,7 +314,13 @@
     "partCount": 6780,
     "image": "/images/categories/sensors.jpg",
     "icon": "activity",
-    "features": ["RTD temperature sensors", "Pressure transmitter assemblies", "Speed pick-up sensor assemblies", "Flame scanner sensor assemblies", "Thermocouple harness assemblies"]
+    "features": [
+      "RTD temperature sensors",
+      "Pressure transmitter assemblies",
+      "Speed pick-up sensor assemblies",
+      "Flame scanner sensor assemblies",
+      "Thermocouple harness assemblies"
+    ]
   },
   {
     "id": "cat-actuators",
@@ -217,7 +331,13 @@
     "partCount": 3450,
     "image": "/categories/actuators.jpg",
     "icon": "settings",
-    "features": ["Hydraulic actuator assemblies", "Servo valve assemblies", "Electro-hydraulic converters", "Proportional control valves", "Positioner feedback assemblies"]
+    "features": [
+      "Hydraulic actuator assemblies",
+      "Servo valve assemblies",
+      "Electro-hydraulic converters",
+      "Proportional control valves",
+      "Positioner feedback assemblies"
+    ]
   },
   {
     "id": "cat-bearings-seals",
@@ -228,7 +348,13 @@
     "partCount": 9230,
     "image": "/images/categories/bearings.jpg",
     "icon": "thermometer",
-    "features": ["Tilting pad journal bearings", "Tapered land thrust bearings", "Carbon seal ring assemblies", "Labyrinth seal segment sets", "Bearing isolator seal rings"]
+    "features": [
+      "Tilting pad journal bearings",
+      "Tapered land thrust bearings",
+      "Carbon seal ring assemblies",
+      "Labyrinth seal segment sets",
+      "Bearing isolator seal rings"
+    ]
   },
   {
     "id": "cat-lube-oil",
@@ -239,7 +365,13 @@
     "partCount": 4890,
     "image": "/images/categories/lube-oil.jpg",
     "icon": "settings",
-    "features": ["Lube oil pump assemblies", "Oil cooler core assemblies", "Lube oil filter elements", "Oil mist eliminator assemblies", "Thermostatic valve assemblies"]
+    "features": [
+      "Lube oil pump assemblies",
+      "Oil cooler core assemblies",
+      "Lube oil filter elements",
+      "Oil mist eliminator assemblies",
+      "Thermostatic valve assemblies"
+    ]
   },
   {
     "id": "cat-air-inlet",
@@ -250,7 +382,13 @@
     "partCount": 3210,
     "image": "/images/categories/air-inlet.jpg",
     "icon": "settings",
-    "features": ["Air intake filter housings", "Filter element assemblies", "Inlet silencer assemblies", "Evaporative cooling media", "Anti-icing system components"]
+    "features": [
+      "Air intake filter housings",
+      "Filter element assemblies",
+      "Inlet silencer assemblies",
+      "Evaporative cooling media",
+      "Anti-icing system components"
+    ]
   },
   {
     "id": "cat-ge-modules",
@@ -261,7 +399,13 @@
     "partCount": 5670,
     "image": "/images/categories/ge-modules.jpg",
     "icon": "cpu",
-    "features": ["I/O processor modules", "Power supply modules", "Terminal board assemblies", "Servo driver modules", "Pulse processor modules"]
+    "features": [
+      "I/O processor modules",
+      "Power supply modules",
+      "Terminal board assemblies",
+      "Servo driver modules",
+      "Pulse processor modules"
+    ]
   },
   {
     "id": "cat-generator",
@@ -272,7 +416,13 @@
     "partCount": 4320,
     "image": "/images/categories/generator.jpg",
     "icon": "zap",
-    "features": ["Generator rotor windings", "Stator bar assemblies", "Excitation system modules", "AVR control cards", "Generator protection relays"]
+    "features": [
+      "Generator rotor windings",
+      "Stator bar assemblies",
+      "Excitation system modules",
+      "AVR control cards",
+      "Generator protection relays"
+    ]
   },
   {
     "id": "cat-hrsg",
@@ -283,7 +433,13 @@
     "partCount": 2980,
     "image": "/images/categories/hrsg.jpg",
     "icon": "settings",
-    "features": ["Economizer section assemblies", "Evaporator coil assemblies", "Superheater tube bundles", "Duct burner assemblies", "Diverter damper assemblies"]
+    "features": [
+      "Economizer section assemblies",
+      "Evaporator coil assemblies",
+      "Superheater tube bundles",
+      "Duct burner assemblies",
+      "Diverter damper assemblies"
+    ]
   },
   {
     "id": "cat-protection",
@@ -294,7 +450,13 @@
     "partCount": 3450,
     "image": "/images/categories/protection.jpg",
     "icon": "shield",
-    "features": ["Turbine protection relays", "Emergency shutdown systems", "Overspeed protection devices", "Fire detection system components", "Safety instrumented system modules"]
+    "features": [
+      "Turbine protection relays",
+      "Emergency shutdown systems",
+      "Overspeed protection devices",
+      "Fire detection system components",
+      "Safety instrumented system modules"
+    ]
   },
   {
     "id": "cat-nsn-parts",
@@ -305,7 +467,13 @@
     "partCount": 15600,
     "image": "/images/categories/nsn.jpg",
     "icon": "hash",
-    "features": ["Full NSN traceability", "Mil-spec compliance", "Complete documentation", "Cross-reference capability", "Global NSN coverage"]
+    "features": [
+      "Full NSN traceability",
+      "Mil-spec compliance",
+      "Complete documentation",
+      "Cross-reference capability",
+      "Global NSN coverage"
+    ]
   },
   {
     "id": "cat-cage-parts",
@@ -316,7 +484,13 @@
     "partCount": 12300,
     "image": "/images/categories/cage.jpg",
     "icon": "badgecheck",
-    "features": ["CAGE code traceability", "Manufacturer verification", "Full certification docs", "Government-compliant", "DLA/DoD referenced parts"]
+    "features": [
+      "CAGE code traceability",
+      "Manufacturer verification",
+      "Full certification docs",
+      "Government-compliant",
+      "DLA/DoD referenced parts"
+    ]
   },
   {
     "id": "cat-obsolete",
@@ -327,7 +501,13 @@
     "partCount": 8900,
     "image": "/images/categories/obsolete.jpg",
     "icon": "package",
-    "features": ["Discontinued part sourcing", "Legacy control system parts", "Obsolete combustion hardware", "Hard-to-find components", "Global supplier network search"]
+    "features": [
+      "Discontinued part sourcing",
+      "Legacy control system parts",
+      "Obsolete combustion hardware",
+      "Hard-to-find components",
+      "Global supplier network search"
+    ]
   },
   {
     "id": "cat-hot-stock",
@@ -338,7 +518,13 @@
     "partCount": 4500,
     "image": "/images/categories/hot-stock.jpg",
     "icon": "zap",
-    "features": ["24-hour dispatch ready", "Pre-inspected inventory", "Full documentation included", "All OEM platforms covered", "Priority handling & shipping"]
+    "features": [
+      "24-hour dispatch ready",
+      "Pre-inspected inventory",
+      "Full documentation included",
+      "All OEM platforms covered",
+      "Priority handling & shipping"
+    ]
   },
   {
     "id": "cat-cross-ref",
@@ -349,6 +535,1525 @@
     "partCount": 7800,
     "image": "/images/categories/cross-ref.jpg",
     "icon": "search",
-    "features": ["OEM cross-reference data", "Interchangeability verified", "Form-fit-function guaranteed", "Multi-manufacturer equivalents", "Complete spec documentation"]
+    "features": [
+      "OEM cross-reference data",
+      "Interchangeability verified",
+      "Form-fit-function guaranteed",
+      "Multi-manufacturer equivalents",
+      "Complete spec documentation"
+    ]
+  },
+  {
+    "id": "cat-av-001",
+    "name": "AADF Testers / Simulators",
+    "slug": "av-aadf-testers-simulators",
+    "group": "Aviation Test Equipment",
+    "description": "AADF Testers / Simulators — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1477,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "radio",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-002",
+    "name": "ADS-B Testers / UAT Test Sets",
+    "slug": "av-ads-b-testers-uat-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "ADS-B Testers / UAT Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 214,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "activity",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-003",
+    "name": "Air Data Test Sets",
+    "slug": "av-air-data-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Air Data Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 695,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "settings",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-004",
+    "name": "Aircraft Environmental Control",
+    "slug": "av-aircraft-environmental-control",
+    "group": "Aviation Test Equipment",
+    "description": "Aircraft Environmental Control — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 531,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "zap",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-005",
+    "name": "Altimeter Test Sets",
+    "slug": "av-altimeter-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Altimeter Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1174,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "shield",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-006",
+    "name": "Altitude Encoders / Testers",
+    "slug": "av-altitude-encoders-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Altitude Encoders / Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 499,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "cpu",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-007",
+    "name": "Antenna Analyzers",
+    "slug": "av-antenna-analyzers",
+    "group": "Aviation Test Equipment",
+    "description": "Antenna Analyzers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 808,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "thermometer",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-008",
+    "name": "Automated Test (ATE) Sets",
+    "slug": "av-automated-test-ate-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Automated Test (ATE) Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 473,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "package",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-009",
+    "name": "Autopilot Test Sets",
+    "slug": "av-autopilot-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Autopilot Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 218,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "search",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-010",
+    "name": "Avionics",
+    "slug": "av-avionics",
+    "group": "Aviation Test Equipment",
+    "description": "Avionics — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 496,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "hash",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-011",
+    "name": "Balancer / Analyzers",
+    "slug": "av-balancer-analyzers",
+    "group": "Aviation Test Equipment",
+    "description": "Balancer / Analyzers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1186,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "fuel",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-012",
+    "name": "Battery Charger Analyzer",
+    "slug": "av-battery-charger-analyzer",
+    "group": "Aviation Test Equipment",
+    "description": "Battery Charger Analyzer — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 400,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "plane",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-013",
+    "name": "Bonding Meters / Resistance Testers",
+    "slug": "av-bonding-meters-resistance-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Bonding Meters / Resistance Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1447,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "radio",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-014",
+    "name": "Borescope / Fiberscope Test Sets",
+    "slug": "av-borescope-fiberscope-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Borescope / Fiberscope Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 809,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "activity",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-015",
+    "name": "Cable Tester / TDR Test Sets",
+    "slug": "av-cable-tester-tdr-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Cable Tester / TDR Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1117,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "settings",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-016",
+    "name": "Calibration Testers",
+    "slug": "av-calibration-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Calibration Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1433,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "zap",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-017",
+    "name": "Chromameters & Spectroradiometers",
+    "slug": "av-chromameters-spectroradiometers",
+    "group": "Aviation Test Equipment",
+    "description": "Chromameters & Spectroradiometers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1487,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "shield",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-018",
+    "name": "Circuit Board Testers / Trackers",
+    "slug": "av-circuit-board-testers-trackers",
+    "group": "Aviation Test Equipment",
+    "description": "Circuit Board Testers / Trackers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 815,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "cpu",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-019",
+    "name": "Comm Service Monitors",
+    "slug": "av-comm-service-monitors",
+    "group": "Aviation Test Equipment",
+    "description": "Comm Service Monitors — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1034,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "thermometer",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-020",
+    "name": "Connectors / Fitting / Adapters",
+    "slug": "av-connectors-fitting-adapters",
+    "group": "Aviation Test Equipment",
+    "description": "Connectors / Fitting / Adapters — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 754,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "package",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-021",
+    "name": "Crimping Tools",
+    "slug": "av-crimping-tools",
+    "group": "Aviation Test Equipment",
+    "description": "Crimping Tools — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1357,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "search",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-022",
+    "name": "Databus Analyzers / Testers",
+    "slug": "av-databus-analyzers-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Databus Analyzers / Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 240,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "hash",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-023",
+    "name": "DME Testers",
+    "slug": "av-dme-testers",
+    "group": "Aviation Test Equipment",
+    "description": "DME Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1403,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "fuel",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-024",
+    "name": "Eddy Current Testers",
+    "slug": "av-eddy-current-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Eddy Current Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 813,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "plane",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-025",
+    "name": "ELT Testers",
+    "slug": "av-elt-testers",
+    "group": "Aviation Test Equipment",
+    "description": "ELT Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1458,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "radio",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-026",
+    "name": "Engine Test Sets",
+    "slug": "av-engine-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Engine Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1225,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "activity",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-027",
+    "name": "FDR / CVR Flight Recorders",
+    "slug": "av-fdr-cvr-flight-recorders",
+    "group": "Aviation Test Equipment",
+    "description": "FDR / CVR Flight Recorders — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1127,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "settings",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-028",
+    "name": "Flight Control Testers",
+    "slug": "av-flight-control-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Flight Control Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 830,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "zap",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-029",
+    "name": "Flight Data Readouts",
+    "slug": "av-flight-data-readouts",
+    "group": "Aviation Test Equipment",
+    "description": "Flight Data Readouts — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 784,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "shield",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-030",
+    "name": "Flight Management Computer",
+    "slug": "av-flight-management-computer",
+    "group": "Aviation Test Equipment",
+    "description": "Flight Management Computer — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 633,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "cpu",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-031",
+    "name": "Frequency / Universal Counter Units",
+    "slug": "av-frequency-universal-counter-units",
+    "group": "Aviation Test Equipment",
+    "description": "Frequency / Universal Counter Units — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1441,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "thermometer",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-032",
+    "name": "Fuel Quantity Testers",
+    "slug": "av-fuel-quantity-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Fuel Quantity Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1295,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "package",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-033",
+    "name": "GPS and GNSS Receivers",
+    "slug": "av-gps-and-gnss-receivers",
+    "group": "Aviation Test Equipment",
+    "description": "GPS and GNSS Receivers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 802,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "search",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-034",
+    "name": "GPS Satellite Simulators",
+    "slug": "av-gps-satellite-simulators",
+    "group": "Aviation Test Equipment",
+    "description": "GPS Satellite Simulators — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1352,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "hash",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-035",
+    "name": "GPS Test Sets",
+    "slug": "av-gps-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "GPS Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 531,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "fuel",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-036",
+    "name": "Ground Station Simulators",
+    "slug": "av-ground-station-simulators",
+    "group": "Aviation Test Equipment",
+    "description": "Ground Station Simulators — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 294,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "plane",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-037",
+    "name": "Ground Test Equipment",
+    "slug": "av-ground-test-equipment",
+    "group": "Aviation Test Equipment",
+    "description": "Ground Test Equipment — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1502,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "radio",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-038",
+    "name": "Hand Tools",
+    "slug": "av-hand-tools",
+    "group": "Aviation Test Equipment",
+    "description": "Hand Tools — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 711,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "activity",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-039",
+    "name": "Headset Testers",
+    "slug": "av-headset-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Headset Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 581,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "settings",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-040",
+    "name": "Hot Bonders",
+    "slug": "av-hot-bonders",
+    "group": "Aviation Test Equipment",
+    "description": "Hot Bonders — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 542,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "zap",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-041",
+    "name": "Insulation / Continuity Testers",
+    "slug": "av-insulation-continuity-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Insulation / Continuity Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 722,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "shield",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-042",
+    "name": "Landing Gear Test Sets",
+    "slug": "av-landing-gear-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Landing Gear Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 957,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "cpu",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-043",
+    "name": "Laser Wire Markers / Strippers",
+    "slug": "av-laser-wire-markers-strippers",
+    "group": "Aviation Test Equipment",
+    "description": "Laser Wire Markers / Strippers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 242,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "thermometer",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-044",
+    "name": "Leak Testers",
+    "slug": "av-leak-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Leak Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1021,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "package",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-045",
+    "name": "Loop Resistance Testers (LRT)",
+    "slug": "av-loop-resistance-testers-lrt",
+    "group": "Aviation Test Equipment",
+    "description": "Loop Resistance Testers (LRT) — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 539,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "search",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-046",
+    "name": "Megohmmeter",
+    "slug": "av-megohmmeter",
+    "group": "Aviation Test Equipment",
+    "description": "Megohmmeter — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1236,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "hash",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-047",
+    "name": "Microwave Simulator / Analyzers",
+    "slug": "av-microwave-simulator-analyzers",
+    "group": "Aviation Test Equipment",
+    "description": "Microwave Simulator / Analyzers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1608,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "fuel",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-048",
+    "name": "Multifunction Flightline Test Set",
+    "slug": "av-multifunction-flightline-test-set",
+    "group": "Aviation Test Equipment",
+    "description": "Multifunction Flightline Test Set — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1622,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "plane",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-049",
+    "name": "Multimeters",
+    "slug": "av-multimeters",
+    "group": "Aviation Test Equipment",
+    "description": "Multimeters — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1535,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "radio",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-050",
+    "name": "NAV/COMM Test Sets",
+    "slug": "av-nav-comm-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "NAV/COMM Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1022,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "activity",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-051",
+    "name": "NDT Inspection Systems",
+    "slug": "av-ndt-inspection-systems",
+    "group": "Aviation Test Equipment",
+    "description": "NDT Inspection Systems — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1610,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "settings",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-052",
+    "name": "Onboard Flight Data System",
+    "slug": "av-onboard-flight-data-system",
+    "group": "Aviation Test Equipment",
+    "description": "Onboard Flight Data System — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1369,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "zap",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-053",
+    "name": "Optical Time Domain Reflectometers",
+    "slug": "av-optical-time-domain-reflectometers",
+    "group": "Aviation Test Equipment",
+    "description": "Optical Time Domain Reflectometers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1158,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "shield",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-054",
+    "name": "Oscilloscope",
+    "slug": "av-oscilloscope",
+    "group": "Aviation Test Equipment",
+    "description": "Oscilloscope — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1304,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "cpu",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-055",
+    "name": "Parts & Accessories",
+    "slug": "av-parts-accessories",
+    "group": "Aviation Test Equipment",
+    "description": "Parts & Accessories — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 464,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "thermometer",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-056",
+    "name": "Pitot Static Adapters",
+    "slug": "av-pitot-static-adapters",
+    "group": "Aviation Test Equipment",
+    "description": "Pitot Static Adapters — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 565,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "package",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-057",
+    "name": "Pitot Static Testers",
+    "slug": "av-pitot-static-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Pitot Static Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 823,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "search",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-058",
+    "name": "Portable Data Loader / Transfer Interface Units",
+    "slug": "av-portable-data-loader-transfer-interface-units",
+    "group": "Aviation Test Equipment",
+    "description": "Portable Data Loader / Transfer Interface Units — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 615,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "hash",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-059",
+    "name": "Portable Load Banks",
+    "slug": "av-portable-load-banks",
+    "group": "Aviation Test Equipment",
+    "description": "Portable Load Banks — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 827,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "fuel",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-060",
+    "name": "Power Analyzers",
+    "slug": "av-power-analyzers",
+    "group": "Aviation Test Equipment",
+    "description": "Power Analyzers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1106,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "plane",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-061",
+    "name": "Power Supply / Starters",
+    "slug": "av-power-supply-starters",
+    "group": "Aviation Test Equipment",
+    "description": "Power Supply / Starters — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1203,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "radio",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-062",
+    "name": "Precision Track Selector",
+    "slug": "av-precision-track-selector",
+    "group": "Aviation Test Equipment",
+    "description": "Precision Track Selector — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 932,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "activity",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-063",
+    "name": "Pressure Testers",
+    "slug": "av-pressure-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Pressure Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 628,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "settings",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-064",
+    "name": "Purging System",
+    "slug": "av-purging-system",
+    "group": "Aviation Test Equipment",
+    "description": "Purging System — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 601,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "zap",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-065",
+    "name": "Quick Access Recorders",
+    "slug": "av-quick-access-recorders",
+    "group": "Aviation Test Equipment",
+    "description": "Quick Access Recorders — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 642,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "shield",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-066",
+    "name": "Radar Altimeters",
+    "slug": "av-radar-altimeters",
+    "group": "Aviation Test Equipment",
+    "description": "Radar Altimeters — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 415,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "cpu",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-067",
+    "name": "Radar Test Sets",
+    "slug": "av-radar-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Radar Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 566,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "thermometer",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-068",
+    "name": "RF Wattmeters",
+    "slug": "av-rf-wattmeters",
+    "group": "Aviation Test Equipment",
+    "description": "RF Wattmeters — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1049,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "package",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-069",
+    "name": "SELCAL Test Sets",
+    "slug": "av-selcal-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "SELCAL Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 265,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "search",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-070",
+    "name": "Sight Compasses",
+    "slug": "av-sight-compasses",
+    "group": "Aviation Test Equipment",
+    "description": "Sight Compasses — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1163,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "hash",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-071",
+    "name": "Signal Generator",
+    "slug": "av-signal-generator",
+    "group": "Aviation Test Equipment",
+    "description": "Signal Generator — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 811,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "fuel",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-072",
+    "name": "Spectrum / Network Analyzers",
+    "slug": "av-spectrum-network-analyzers",
+    "group": "Aviation Test Equipment",
+    "description": "Spectrum / Network Analyzers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 351,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "plane",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-073",
+    "name": "Stormscope Analyzers",
+    "slug": "av-stormscope-analyzers",
+    "group": "Aviation Test Equipment",
+    "description": "Stormscope Analyzers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 529,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "radio",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-074",
+    "name": "Strobe Light Testers / Measuring Guns",
+    "slug": "av-strobe-light-testers-measuring-guns",
+    "group": "Aviation Test Equipment",
+    "description": "Strobe Light Testers / Measuring Guns — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1011,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "activity",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-075",
+    "name": "Swaging Machine",
+    "slug": "av-swaging-machine",
+    "group": "Aviation Test Equipment",
+    "description": "Swaging Machine — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 649,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "settings",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-076",
+    "name": "TACAN Testers",
+    "slug": "av-tacan-testers",
+    "group": "Aviation Test Equipment",
+    "description": "TACAN Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1614,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "zap",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-077",
+    "name": "Tachometers",
+    "slug": "av-tachometers",
+    "group": "Aviation Test Equipment",
+    "description": "Tachometers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1336,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "shield",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-078",
+    "name": "TCAS Test Sets",
+    "slug": "av-tcas-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "TCAS Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1618,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "cpu",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-079",
+    "name": "Temperature Test Sets",
+    "slug": "av-temperature-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Temperature Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 691,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "thermometer",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-080",
+    "name": "Tensiometer Test Sets",
+    "slug": "av-tensiometer-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Tensiometer Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 689,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "package",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-081",
+    "name": "Test Equipment",
+    "slug": "av-test-equipment",
+    "group": "Aviation Test Equipment",
+    "description": "Test Equipment — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1100,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "search",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-082",
+    "name": "Thermometers / Temperature Sensors",
+    "slug": "av-thermometers-temperature-sensors",
+    "group": "Aviation Test Equipment",
+    "description": "Thermometers / Temperature Sensors — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1354,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "hash",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-083",
+    "name": "Tooling",
+    "slug": "av-tooling",
+    "group": "Aviation Test Equipment",
+    "description": "Tooling — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 376,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "fuel",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-084",
+    "name": "Torque Wrenches",
+    "slug": "av-torque-wrenches",
+    "group": "Aviation Test Equipment",
+    "description": "Torque Wrenches — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1675,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "plane",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-085",
+    "name": "Transponder / ADS-B Test Sets",
+    "slug": "av-transponder-ads-b-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Transponder / ADS-B Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 208,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "radio",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-086",
+    "name": "ULB / Ultrasonic Test Sets",
+    "slug": "av-ulb-ultrasonic-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "ULB / Ultrasonic Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1408,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "activity",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-087",
+    "name": "Vibration Analyzer / Balancer Test Sets",
+    "slug": "av-vibration-analyzer-balancer-test-sets",
+    "group": "Aviation Test Equipment",
+    "description": "Vibration Analyzer / Balancer Test Sets — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1409,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "settings",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-088",
+    "name": "Visual Fault Locator",
+    "slug": "av-visual-fault-locator",
+    "group": "Aviation Test Equipment",
+    "description": "Visual Fault Locator — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1081,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "zap",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
+  },
+  {
+    "id": "cat-av-089",
+    "name": "Wire & Cable Testers",
+    "slug": "av-wire-cable-testers",
+    "group": "Aviation Test Equipment",
+    "description": "Wire & Cable Testers — Buy, rent, or lease new and refurbished units from leading manufacturers. Certified, calibrated, and ready for immediate deployment.",
+    "partCount": 1359,
+    "image": "/images/categories/aviation-test.jpg",
+    "icon": "shield",
+    "features": [
+      "New & refurbished units available",
+      "FAA-certified calibration included",
+      "Global shipping to 150+ countries",
+      "Rent / lease / buy options",
+      "Trade-in accepted"
+    ]
   }
 ]
