@@ -40,7 +40,7 @@ function ResultBox({ text, label }: { text: string; label: string }) {
   );
 }
 
-export default function AIToolsPage() {
+export default function ContentToolsPage() {
   const [tab, setTab] = useState<Tab>('generate');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<string | null>(null);
@@ -371,8 +371,8 @@ export default function AIToolsPage() {
             <Sparkles className="w-5 h-5 text-orange" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-navy">AI Tools</h1>
-            <p className="text-sm text-text-muted">AI-powered content generation and optimization tools</p>
+            <h1 className="text-xl font-bold text-navy">Content Tools</h1>
+            <p className="text-sm text-text-muted">Content generation and optimization tools</p>
           </div>
         </div>
 

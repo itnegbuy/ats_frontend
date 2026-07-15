@@ -174,7 +174,7 @@ export default function ChatBotLogo({
                 <div className={styles.armRight} />
 
                 <div className={styles.floatBubble}>
-                  <span>AI</span>
+                  <span>Bot</span>
                   <div className={styles.loader}>
                     <i /><i /><i />
                   </div>

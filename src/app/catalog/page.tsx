@@ -1,9 +1,12 @@
 'use client';
 
 import { use, useState, useEffect, useCallback, useRef } from 'react';
+import Link from 'next/link';
 import {
   Search, SlidersHorizontal, X, Grid2X2, Grid3X3, LayoutList,
   ChevronLeft, ChevronRight, LayoutGrid, List, LayoutGrid as LayoutGridIcon,
+  Flame, Plane, Settings, Wrench, Cpu, Radio, Zap,
+  ShieldCheck, Clock,
 } from 'lucide-react';
 import type { Product, NavCategory, NavCategoryTree } from '@/types';
 import { getProducts } from '@/services/productService';
@@ -45,6 +48,21 @@ const SORT_OPTIONS = [
   { value: 'price_asc', label: 'Price: Low to High' },
   { value: 'price_desc', label: 'Price: High to Low' },
   { value: 'newest', label: 'Newest' },
+];
+
+const QUICK_CATEGORIES = [
+  { label: 'LM2500', icon: Plane, href: '/catalog?category=lm2500' },
+  { label: 'LM6000', icon: Plane, href: '/catalog?category=lm6000' },
+  { label: 'LM9000', icon: Plane, href: '/catalog?category=lm9000' },
+  { label: 'LMS100', icon: Plane, href: '/catalog?category=lms100' },
+  { label: 'GE Frame 5/6/7/9', icon: Settings, href: '/catalog?category=ge-frame' },
+  { label: 'Siemens SGT', icon: Settings, href: '/catalog?category=siemens' },
+  { label: 'Solar Turbines', icon: Settings, href: '/catalog?category=solar-turbines' },
+  { label: 'Bently Nevada', icon: Radio, href: '/catalog?category=bently-nevada' },
+  { label: 'GE Modules', icon: Cpu, href: '/catalog?category=ge-modules' },
+  { label: 'Combustion Parts', icon: Flame, href: '/catalog?category=combustion' },
+  { label: 'Control Systems', icon: Wrench, href: '/catalog?category=control-systems' },
+  { label: 'Hot Stock', icon: Zap, href: '/catalog?category=hot-stock' },
 ];
 
 const LIMITS_PER_VIEW: Record<string, number> = {
@@ -323,16 +341,46 @@ export default function CatalogPage({
 
       <main className="flex-1 bg-bg">
         {/* Page header */}
-        <div className="bg-navy py-10">
+        <div className="bg-gradient-to-br from-navy via-[#0B1A33] to-[#0D2247] py-12">
           <div className="max-w-7xl mx-auto px-4">
             <Breadcrumb
-              items={[{ label: 'Home', href: '/' }, { label: 'Parts Catalog' }]}
+              items={[{ label: 'Home', href: '/' }, { label: 'Product Catalog' }]}
               className="mb-4 [&_a]:text-silver/60 [&_a:hover]:text-orange [&_.text-text]:text-silver/90"
             />
-            <h1 className="text-3xl font-bold text-white mb-1">Parts Catalog</h1>
-            <p className="text-silver/70 text-sm">
-              {loading ? 'Loading…' : `${total.toLocaleString()} certified aerospace parts`}
-            </p>
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+              <div>
+                <h1 className="text-3xl sm:text-4xl font-black text-white mb-2 tracking-tight">
+                  Product Catalog
+                </h1>
+                <p className="text-silver/70 text-sm sm:text-base">
+                  {loading ? 'Loading…' : `${total.toLocaleString()} turbine parts & components`}
+                </p>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2 border border-white/10">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                  <span className="text-xs text-silver font-medium">AS9120 Certified</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2 border border-white/10">
+                  <Clock className="w-4 h-4 text-orange" />
+                  <span className="text-xs text-silver font-medium">24-Hr Quote</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick category links */}
+            <div className="mt-6 flex flex-wrap gap-2">
+              {QUICK_CATEGORIES.map((cat) => (
+                <Link
+                  key={cat.label}
+                  href={cat.href}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/30 rounded-lg text-white text-xs font-medium transition-all"
+                >
+                  <cat.icon className="w-3.5 h-3.5 text-orange/80" />
+                  {cat.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 

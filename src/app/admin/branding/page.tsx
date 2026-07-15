@@ -612,9 +612,9 @@ export default function BrandingPage() {
 
           <div className="border-t border-[#E8EDF2]" />
 
-          {/* AI Settings */}
+          {/* Chat Settings */}
           <div>
-            <h3 className="text-sm font-semibold text-[#0A1628] mb-3">AI Settings</h3>
+            <h3 className="text-sm font-semibold text-[#0A1628] mb-3">Chat Settings</h3>
             <div className="space-y-3">
               <label className="flex items-center gap-2">
                 <input
@@ -623,7 +623,7 @@ export default function BrandingPage() {
                   onChange={(e) => setDraft((d) => ({ ...d, chat: { ...d.chat, aiConfig: { ...d.chat.aiConfig, enabled: e.target.checked } } }))}
                   className="rounded border-gray-300 text-[#4F46E5] focus:ring-[#4F46E5]"
                 />
-                <span className="text-sm text-[#1A1A2E]">Enable AI fallback (when chatbot doesn't understand)</span>
+                <span className="text-sm text-[#1A1A2E]">Enable smart fallback (when chatbot doesn't understand)</span>
               </label>
 
               {draft.chat.aiConfig.enabled && (

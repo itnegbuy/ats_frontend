@@ -7,7 +7,7 @@ import CountriesWeServe from '@/components/country/CountriesWeServe';
 
 export const metadata: Metadata = {
   title: 'About AeroTurbineSpare',
-  description: 'Founded in 2009, AeroTurbineSpare is an ISO 9001 & AS9120 certified aerospace parts distributor serving OEMs, MROs, and defense contractors across 150+ countries. 32,000+ parts in catalog.',
+  description: 'Founded in 2009, AeroTurbineSpare is an ISO 9001 & AS9120 certified aerospace parts distributor serving OEMs, MROs, and defense contractors across 150+ countries. 5 Million+ parts in catalog.',
   openGraph: {
     title: 'About AeroTurbineSpare — Precision Aerospace Parts Sourcing',
     description: 'Founded in 2009. ISO 9001 & AS9120 certified. Serving 150+ countries. Your trusted partner for certified aerospace parts.',
@@ -140,7 +140,7 @@ export default async function AboutPage({ params }: { params: Promise<{ country:
                     platforms, we have grown into a full-spectrum aerospace parts
                     distributor serving commercial airlines, MRO facilities, OEM
                     production lines, and defense contractors across 150+ countries.
-                    Today, our warehouse holds over 32,000 line items with same-day
+                    Today, our warehouse holds over 5 million line items with same-day
                     shipping capability for in-stock NSN parts.
                   </p>
                   <p>
@@ -154,7 +154,7 @@ export default async function AboutPage({ params }: { params: Promise<{ country:
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: 'Parts in Catalog', value: '1 Million+' },
+                    { label: 'Parts in Catalog', value: '5 Million+' },
                   { label: 'Countries Served', value: '150+' },
                   { label: 'Years in Business', value: '15+' },
                   { label: 'Quote Response', value: '24 hrs' },

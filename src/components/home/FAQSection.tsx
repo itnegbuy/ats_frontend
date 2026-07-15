@@ -51,7 +51,7 @@ export default function FAQSection() {
               Frequently Asked Questions
             </h2>
             <p className="text-text-muted">
-              Quick answers to common questions about sourcing aerospace parts.
+              Straight answers about sourcing gas turbine parts — no fluff, no jargon.
             </p>
           </div>
 

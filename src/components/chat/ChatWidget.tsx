@@ -141,7 +141,7 @@ export default function ChatWidget({ botName }: ChatWidgetProps) {
                           animate={{ opacity: [1, 0.3, 1] }}
                           transition={{ duration: 2, repeat: Infinity }}
                         />
-                        Online · AI Assistant
+                        Online · Parts Assistant
                       </div>
                     </div>
                   </div>

@@ -13,7 +13,8 @@ import {
   ShoppingBasketIcon,                      
   Plug,         
   Cpu,
-  Rocket, Anchor, Grid3X3, List, Hash,              
+  Rocket, Anchor, Grid3X3, List, Hash,
+  Flame, Gauge, Activity, Fuel, Thermometer, SlidersHorizontal, Crosshair,                
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
@@ -148,67 +149,74 @@ export default function Header() {
   const toggleMobileSection = (label: string) =>
     setOpenMobile((prev) => (prev === label ? null : label));
 
-  // ── Compute mega menus from navTree or fallback ──────────────
-  const hasDynamic = !!(navTree?.productCategories?.length || navTree?.partCategories?.length);
+  const hasDynamic = navTree?.productCategories?.length ? true : false;
 
   const CATALOG_MENU = {
     label: 'Parts & Products',
     href: '/catalog',
     sections: [
       {
-        title: 'Products',
-        items: hasDynamic
-          ? (navTree?.productCategories ?? []).map((cat) => ({
-              label: cat.name,
-              href: `/products/${cat.slug}`,
-              icon: Package,
-              desc: cat.description || 'Product category',
-            }))
-          : [
-              { label: 'Hot Stock', href: '/catalog?category=hot-stock&type=product', icon: Zap, desc: 'High-demand turbine parts ready for immediate dispatch' },
-              { label: 'General Electric 6FA Turbine Parts', href: '/catalog?category=ge-6fa-turbine-parts&type=product', icon: Settings, desc: '6FA gas turbine components, nozzles, buckets & shrouds' },
-              { label: 'Turbine Parts', href: '/catalog?category=turbine-parts&type=product', icon: Package, desc: 'Industrial and aero-derivative turbine spare parts' },
-              { label: 'Gas Turbines Parts', href: '/catalog?category=gas-turbines-parts&type=product', icon: Wrench, desc: 'Gas turbine components for power generation' },
-              { label: 'Bently Nevada', href: '/catalog?category=bently-nevada&type=product', icon: Radio, desc: 'Vibration monitoring and protection systems' },
-              { label: 'GE Modules', href: '/catalog?category=ge-modules&type=product', icon: Cpu, desc: 'GE turbine control modules and accessory components' },
-              { label: 'Engine Portfolio', href: '/catalog?category=engine-portfolio&type=product', icon: Plane, desc: 'Complete engine portfolio covering multiple platforms' },
-            ],
+        title: 'Hot Stock',
+        items: [
+          { label: 'LM2500 Turbine Parts', href: '/catalog?category=hot-stock&type=product', icon: Flame, desc: 'High-demand LM2500 components ready for dispatch' },
+          { label: 'LM6000 Turbine Parts', href: '/catalog?category=hot-stock&type=product', icon: Flame, desc: 'LM6000 gas generator & power turbine spares' },
+          { label: 'LM9000 Turbine Parts', href: '/catalog?category=hot-stock&type=product', icon: Flame, desc: 'LM9000 hot section & rotating components' },
+          { label: 'LMS100 Turbine Parts', href: '/catalog?category=hot-stock&type=product', icon: Flame, desc: 'LMS100 intercooled gas turbine spares' },
+          { label: 'LM500/LM1600 Turbine Parts', href: '/catalog?category=hot-stock&type=product', icon: Flame, desc: 'LM500 & LM1600 marine & industrial parts' },
+        ],
+      },
+      {
+        title: 'GE LM Series',
+        items: [
+          { label: 'LM2500', href: '/catalog?category=lm2500&type=part', icon: Plane, desc: 'Aero-derivative gas turbine — 30 MW class' },
+          { label: 'LM6000', href: '/catalog?category=lm6000&type=part', icon: Plane, desc: 'Aero-derivative gas turbine — 45 MW class' },
+          { label: 'LM9000', href: '/catalog?category=lm9000&type=part', icon: Plane, desc: 'Next-gen aero-derivative — 65+ MW class' },
+          { label: 'LMS100', href: '/catalog?category=lms100&type=part', icon: Plane, desc: 'Intercooled gas turbine — 100 MW class' },
+          { label: 'LM500', href: '/catalog?category=lm500&type=part', icon: Plane, desc: 'Marine & industrial — 5 MW class' },
+          { label: 'LM1600', href: '/catalog?category=lm1600&type=part', icon: Plane, desc: 'Marine & industrial — 15 MW class' },
+          { label: 'All LM Series Parts', href: '/catalog?category=lm-series&type=part', icon: Layers, desc: 'Complete LM series inventory' },
+        ],
       },
       {
         title: 'Parts by Manufacturer',
-        items: hasDynamic
-          ? (navTree?.partCategories ?? []).map((cat) => ({
-              label: cat.name,
-              href: `/parts/${cat.slug}`,
-              icon: Settings,
-              desc: cat.description || (cat.manufacturer ? `${cat.manufacturer}` : 'Part category'),
-            }))
-          : [
-              { label: 'GE Power Services', href: '/catalog?category=ge-power-services&type=part', icon: Settings, desc: 'General Electric' },
-              { label: 'PW/MPA FT8', href: '/catalog?category=pw-mpa-ft8&type=part', icon: Settings, desc: 'Pratt & Whitney' },
-              { label: 'GE LM6000', href: '/catalog?category=ge-lm6000&type=part', icon: Settings, desc: 'General Electric' },
-              { label: 'GE Turbine', href: '/catalog?category=ge-turbine&type=part', icon: Settings, desc: 'General Electric' },
-              { label: 'GE Frame 5 6 7 9', href: '/catalog?category=ge-frame-5-6-7-9&type=part', icon: Settings, desc: 'General Electric' },
-              { label: 'Alstom', href: '/catalog?category=alstom&type=part', icon: Settings, desc: 'Alstom' },
-              { label: 'Ansaldo', href: '/catalog?category=ansaldo&type=part', icon: Settings, desc: 'Ansaldo Energia' },
-              { label: 'Rolls Royce', href: '/catalog?category=rolls-royce&type=part', icon: Settings, desc: 'Rolls-Royce' },
-              { label: 'Solar Turbines', href: '/catalog?category=solar-turbines&type=part', icon: Settings, desc: 'Solar Turbines' },
-              { label: 'Siemens', href: '/catalog?category=siemens&type=part', icon: Settings, desc: 'Siemens' },
-            ],
+        items: [
+          { label: 'GE Frame 5 | 6 | 7 | 9', href: '/catalog?category=ge-frame-5-6-7-9&type=part', icon: Settings, desc: 'Heavy-duty gas turbine frames' },
+          { label: 'Siemens SGT | SGT-A | SGT-PAC', href: '/catalog?category=siemens&type=part', icon: Settings, desc: 'Siemens gas turbine spare parts' },
+          { label: 'Alstom', href: '/catalog?category=alstom&type=part', icon: Settings, desc: 'Alstom gas turbine components' },
+          { label: 'Ansaldo Energia', href: '/catalog?category=ansaldo&type=part', icon: Settings, desc: 'Ansaldo AE series turbine parts' },
+          { label: 'Solar Turbines', href: '/catalog?category=solar-turbines&type=part', icon: Settings, desc: 'Solar Taurus, Titan, Mars spares' },
+          { label: 'Bently Nevada', href: '/catalog?category=bently-nevada&type=product', icon: Radio, desc: 'Vibration monitoring & protection' },
+          { label: 'GE Modules', href: '/catalog?category=ge-modules&type=product', icon: Cpu, desc: 'Mark V, VI, VIe control modules' },
+          { label: 'All Manufacturers', href: '/catalog', icon: Grid3X3, desc: 'Browse every brand & platform' },
+        ],
       },
       {
-        title: 'Quick Search',
+        title: 'Turbine Parts & Controls',
         items: [
-          { label: 'Browse All Parts', href: '/catalog', icon: Grid3X3, desc: 'Full inventory of 55,000+ parts' },
-          { label: 'By NSN Number', href: '/catalog?filter=nsn', icon: Hash, desc: '13-digit NATO stock numbers' },
-          { label: 'By CAGE Code', href: '/catalog?filter=cage', icon: BadgeCheck, desc: 'Manufacturer cage identifiers' },
-          { label: 'Advanced Search', href: '/catalog?advanced=1', icon: Search, desc: 'Multi-field filter & boolean search' },
+          { label: 'Turbine Blades & Nozzles', href: '/catalog?category=blades-nozzles&type=part', icon: Activity, desc: 'Stage 1-4 blades, vanes & nozzle assemblies' },
+          { label: 'Combustion Components', href: '/catalog?category=combustion&type=part', icon: Flame, desc: 'Liners, cross-fire tubes, end caps & fuel nozzles' },
+          { label: 'Fuel Systems', href: '/catalog?category=fuel-systems&type=part', icon: Fuel, desc: 'Fuel pumps, valves, manifolds & metering units' },
+          { label: 'Control Systems (Mark V, VI, VIe)', href: '/catalog?category=control-systems&type=part', icon: Cpu, desc: 'Speedtronic control panels & I/O modules' },
+          { label: 'Bearings & Seals', href: '/catalog?category=bearings-seals&type=part', icon: Thermometer, desc: 'Journal bearings, thrust bearings & seal assemblies' },
+          { label: 'Sensors & Instrumentation', href: '/catalog?category=sensors&type=part', icon: Activity, desc: 'Thermocouples, speed sensors, pressure transmitters' },
+          { label: 'Accessory Components', href: '/catalog?category=accessories&type=part', icon: Package, desc: 'Gaskets, oil coolers, filters & coupling hubs' },
+        ],
+      },
+      {
+        title: 'Smart Procurement Tools',
+        items: [
+          { label: 'Search by NSN Number', href: '/catalog?filter=nsn', icon: Hash, desc: '13-digit NATO stock number lookup' },
+          { label: 'Search by CAGE Code', href: '/catalog?filter=cage', icon: BadgeCheck, desc: 'Manufacturer CAGE code search' },
+          { label: 'Advanced Filter Search', href: '/catalog?advanced=1', icon: SlidersHorizontal, desc: 'Multi-field filter with boolean search' },
+          { label: 'Request a Quote', href: '/rfq', icon: FileText, desc: 'Submit an RFQ — get pricing within 24 hours' },
+          { label: 'Cross-Reference Tool', href: '/cross-reference', icon: Search, desc: 'Find equivalent parts across OEMs' },
+          { label: 'Sell Us Your Inventory', href: '/inventory', icon: ShoppingBasketIcon, desc: 'Turn excess stock into cash' },
         ],
       },
     ],
     featured: {
-      label: 'Urgent Need?',
-      desc: 'Skip the queue. Flag your RFQ as urgent for priority 4-hour response.',
+      label: 'Need a Part Fast?',
+      desc: 'Flag your RFQ as urgent and get a priority response within 4 hours — even outside business hours.',
       href: '/rfq?urgency=urgent',
       cta: 'Submit Urgent RFQ',
       badge: '4-hr Response',

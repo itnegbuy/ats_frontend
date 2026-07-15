@@ -51,7 +51,7 @@ const DEFAULT_KB: KnowledgeBaseItem[] = [
     id: 'kb-5',
     category: 'parts',
     question: 'What if my part is not listed in the catalog?',
-    answer: 'If you don\'t find the part you need, don\'t worry! Submit an RFQ with your requirements and our team will source it for you. We have access to **55,000+ parts** and a global network of 1,200+ OEM manufacturers and suppliers.\n\nContact us at sales@aeroturbinespare.com or submit an RFQ at /rfq.',
+    answer: 'If you don\'t find the part you need, don\'t worry! Submit an RFQ with your requirements and our team will source it for you. We have access to **5 Million+ parts** and a global network of 1,200+ OEM manufacturers and suppliers.\n\nContact us at sales@aeroturbinespare.com or submit an RFQ at /rfq.',
     keywords: ['not found', 'not listed', 'missing', 'unavailable', 'can\'t find', 'search'],
     priority: 5,
     isActive: true,

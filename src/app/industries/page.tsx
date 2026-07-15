@@ -76,7 +76,7 @@ export default function IndustriesPage() {
               components for the industries where quality is non-negotiable.
             </p>
             <div className="flex flex-wrap justify-center gap-4 mt-8 text-sm text-silver/70">
-              {['32,000+ parts in catalog', '6 industries', '150+ countries', 'ISO 9001 & AS9120'].map(
+              {['5 Million+ parts in catalog', '6 industries', '150+ countries', 'ISO 9001 & AS9120'].map(
                 (stat) => (
                   <span
                     key={stat}

@@ -7,7 +7,7 @@ const PROVIDER_GROUPS: Record<string, { label: string; providers: string[] }> = 
   email: { label: 'Email Providers', providers: ['smtp', 'resend', 'brevo', 'mailgun', 'sendgrid', 'ses'] },
   auth: { label: 'Authentication', providers: ['google-oauth', 'github-oauth', 'microsoft-oauth', 'otp', 'magic-link', '2fa'] },
   search: { label: 'Search Engines', providers: ['algolia', 'typesense', 'elasticsearch', 'meilisearch'] },
-  ai: { label: 'AI Providers', providers: ['openai', 'anthropic', 'gemini', 'deepseek', 'openrouter'] },
+  ai: { label: 'LLM Providers', providers: ['openai', 'anthropic', 'gemini', 'deepseek', 'openrouter'] },
   queue: { label: 'Queue & Cron', providers: ['redis', 'bullmq', 'rabbitmq'] },
 };
 

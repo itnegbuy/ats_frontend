@@ -17,7 +17,7 @@ Company info:
 - Address: 1360-1362 NW 78th Ave, Doral, FL 33126, USA
 - Certifications: ISO 9001, AS9120B
 - CAGE Code: 8ATR9
-- Inventory: 55,000+ parts
+- Inventory: 5 Million+ parts
 - Shipping: 150+ countries
 
 Services: Parts sourcing, RFQ processing, excess inventory purchasing, 24/7 AOG support.

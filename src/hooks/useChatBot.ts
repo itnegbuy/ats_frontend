@@ -129,7 +129,7 @@ export function useChatBot() {
           `🔹 **CAGE Code:** ${COMPANY_INFO.cageCode}\n` +
           `🔹 **Certifications:** ${COMPANY_INFO.certifications.join(', ')}\n` +
           `🔹 **Global Reach:** Shipping to 150+ countries\n` +
-          `🔹 **Inventory:** 55,000+ parts available\n\n` +
+          `🔹 **Inventory:** 5 Million+ parts available\n\n` +
           `We serve OEMs, MRO facilities, military contractors, and procurement professionals worldwide.`,
           [
             { label: '✅ Certifications', payload: 'Are you ISO certified?' },
