@@ -1,10 +1,10 @@
 import { ShieldCheck, Award, Clock, Globe, Eye } from 'lucide-react';
 
 const BADGES = [
-  { icon: ShieldCheck, label: 'ISO 9001 Certified',           sub: 'Quality Management System' },
-  { icon: Award,       label: 'AS9120 Rev. B',                sub: 'Aerospace Supply Chain' },
-  { icon: Eye,         label: '100% Inspection',              sub: 'On Every Order' },
-  { icon: Clock,       label: '24-Hr Quote Response',         sub: 'Guaranteed Response Time' },
+  { icon: ShieldCheck, label: 'AS9100 & AS9120 Certified',   sub: 'Quality Management System' },
+  { icon: Award,       label: 'Zero Counterfeit Policy',      sub: 'Verified Every Part' },
+  { icon: Eye,         label: '100% Inspection',              sub: 'Full Traceability' },
+  { icon: Clock,       label: '24-Hour Quote Response',       sub: 'Most Quotes Same Day' },
   { icon: Globe,       label: 'Ships to 150+ Countries',      sub: 'Global Logistics Network' },
 ];
 

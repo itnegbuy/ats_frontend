@@ -5,34 +5,34 @@ import { ChevronDown } from 'lucide-react';
 
 const FAQS = [
   {
-    question: 'What certifications do your aerospace parts carry?',
+    question: 'What certifications do your gas turbine parts carry?',
     answer:
-      'All parts are sourced from ISO 9001 and AS9120B certified suppliers. We provide full traceability including 8130-3 tags, certificates of conformance (COCs), and material certifications upon request. Every order undergoes 100% inspection before dispatch.',
+      'Every part ships with AS9100 and AS9120-backed documentation, plus manufacturer certificates of conformance and material traceability where applicable — provided upfront with your quote, not after you\'ve already paid.',
   },
   {
     question: 'How fast can I get a quote?',
     answer:
-      'Our standard quote response time is under 24 hours. For AOG (Aircraft on Ground) urgent requests, we prioritize within 4 hours. Simply submit your RFQ with the required part number, NSN, or description and our team will respond promptly.',
+      'Most requests get a response within 24 hours. For an unplanned outage, we prioritize same-day turnaround wherever we can.',
   },
   {
     question: 'Do you ship internationally?',
     answer:
-      'Yes, we ship to over 150 countries worldwide. We handle all logistics including export documentation, customs clearance, and Incoterms management. Our global logistics network ensures reliable delivery whether you are in Europe, the Middle East, Asia, or North America.',
+      'Yes, to 150+ countries. We handle the export documentation that comes with shipping turbine and control system components, including anything with dual-use restrictions.',
   },
   {
     question: 'What is a CAGE code and why is it important?',
     answer:
-      'A CAGE (Commercial and Government Entity) code is a unique identifier assigned to suppliers by the Department of Defense. It is essential for tracking and verifying aerospace and defense parts. All our parts are cross-referenced by CAGE code to ensure authenticity and compliance with military standards.',
+      'It\'s a unique identifier for the manufacturer or supplier of a part, used heavily in defense and government procurement. For turbine buyers, it matters because it confirms you\'re getting the part from the entity that actually made or certified it — not a lookalike from an unverified source.',
   },
   {
     question: 'How do you ensure parts are counterfeit-free?',
     answer:
-      'We maintain a strict Zero Counterfeit Policy. Our quality assurance process includes supplier qualification audits, incoming inspection, dimensional verification, and chain-of-custody documentation. We also use advanced testing methods when required to verify material composition and authenticity.',
+      'Every part goes through inspection and documentation checks before it ships. If we can\'t verify where a part came from, we don\'t carry it — even if it\'s in high demand.',
   },
   {
-    question: 'Can you source hard-to-find or obsolete parts?',
+    question: 'Can you source hard-to-find or obsolete turbine parts?',
     answer:
-      'Absolutely. We specialize in sourcing hard-to-find, obsolete, and legacy components for both commercial and military aircraft. Our extensive global supplier network and deep industry relationships allow us to locate parts that other distributors cannot find.',
+      'This is honestly where we\'re strongest. Legacy Mark V control cards, discontinued combustion hardware, older Speedtronic components — our network of 1,200+ manufacturers and distributors means we\'re often able to find what other suppliers have stopped trying to.',
   },
 ];
 

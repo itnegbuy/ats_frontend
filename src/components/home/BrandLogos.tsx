@@ -33,8 +33,8 @@ export default function BrandLogos() {
             <span className="w-6 h-px bg-brand" /> Our Partners <span className="w-6 h-px bg-brand" />
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-text">Trusted by Global Manufacturers</h2>
-          <p className="text-text-muted mt-3 max-w-2xl mx-auto text-sm">
-            We source from leading OEMs and certified manufacturers worldwide.
+          <p className="text-text-muted mt-3 max-w-3xl mx-auto text-sm">
+            We work across every major turbine OEM platform in service today — supplying and supporting operators running General Electric, Siemens, Rolls-Royce, Solar Turbines, Alstom, Ansaldo Energia, and Pratt &amp; Whitney aeroderivative units.
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">

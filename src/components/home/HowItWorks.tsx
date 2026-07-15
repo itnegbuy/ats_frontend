@@ -5,25 +5,25 @@ const STEPS = [
     icon: Search,
     step: '01',
     title: 'Search or Submit RFQ',
-    desc: 'Enter your part number, NSN, or CAGE code. Or submit a detailed RFQ directly — no account required.',
+    desc: 'Give us your part number, NSN, CAGE code, or just tell us the platform and system — GE Mark VIe, LM2500, Frame 7, whatever it is.',
   },
   {
     icon: FileText,
     step: '02',
     title: 'Receive Your Quote',
-    desc: 'Our team reviews your requirement and responds within 24 hours with a competitive, certified quote.',
+    desc: 'Our team, who actually knows these platforms, gets back to you with pricing, availability, and documentation — usually within 24 hours.',
   },
   {
     icon: CheckCircle,
     step: '03',
     title: 'Review & Accept',
-    desc: 'Review the quote, approve pricing, and confirm your order. We handle all certification documentation.',
+    desc: 'Confirm pricing and certification paperwork upfront. No surprises once the part is on its way.',
   },
   {
     icon: Package,
     step: '04',
     title: 'Delivery Worldwide',
-    desc: 'We package and ship to your facility globally. Real-time tracking keeps you updated every step.',
+    desc: 'We ship to 150+ countries with tracking, so you know exactly when your part lands.',
   },
 ];
 
@@ -36,8 +36,8 @@ export default function HowItWorks() {
             <span className="w-6 h-px bg-brand" /> Simple Process <span className="w-6 h-px bg-brand" />
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-text">How It Works</h2>
-          <p className="text-text-muted mt-3 max-w-xl mx-auto">
-            From initial inquiry to delivery, we make aerospace parts procurement effortless.
+          <p className="text-text-muted mt-3 max-w-2xl mx-auto">
+            No account managers who don't know turbines, no back-and-forth over what platform you're running. Here's how sourcing works with us.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

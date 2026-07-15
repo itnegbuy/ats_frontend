@@ -21,9 +21,9 @@ const FALLBACK_POSTS: BlogPost[] = [
   {
     id: 'blog-fallback-1',
     coverImage: '/images/part-controls.jpg',
-    title: 'Understanding NSN Numbers: A Complete Guide for Aerospace Procurement',
-    slug: 'understanding-nsn-numbers-guide',
-    excerpt: 'Learn how NATO Stock Numbers work, how to decode them, and why they are essential for aerospace parts procurement. A comprehensive guide for procurement professionals.',
+    title: 'Understanding NSN & CAGE Codes for Gas Turbine Parts Procurement',
+    slug: 'understanding-nsn-cage-codes-gas-turbine-parts',
+    excerpt: 'Learn how NATO Stock Numbers and CAGE codes work for gas turbine parts procurement. A practical guide for power generation and oil & gas buyers.',
     author: 'AeroTurbineSpare Team',
     publishedAt: '2026-06-15',
     readingTime: '8 min read',
@@ -32,24 +32,24 @@ const FALLBACK_POSTS: BlogPost[] = [
   {
     id: 'blog-fallback-2',
     coverImage: '/images/part-fuselage.jpg',
-    title: 'AS9120 vs ISO 9001: What Aerospace Distributors Need to Know',
-    slug: 'as9120-vs-iso-9001-aerospace-distributors',
-    excerpt: 'Understand the key differences between AS9120 Rev B and ISO 9001:2015 certifications and why both matter for aerospace parts quality and traceability.',
+    title: 'GE Mark VI vs Mark VIe: What Changes When You Upgrade Your Control System',
+    slug: 'ge-mark-vi-vs-mark-vie-control-system-upgrade',
+    excerpt: 'Understand the key differences between GE Speedtronic Mark VI and Mark VIe control platforms and what to consider before upgrading your turbine control system.',
     author: 'AeroTurbineSpare Team',
     publishedAt: '2026-05-28',
     readingTime: '6 min read',
-    category: 'Quality Standards',
+    category: 'Control Systems',
   },
   {
     id: 'blog-fallback-3',
     coverImage: '/images/part-engine-1.jpg',
-    title: 'AOG Situations: How to Source Critical Aircraft Parts Fast',
-    slug: 'aog-situations-source-critical-aircraft-parts',
-    excerpt: 'Best practices for handling Aircraft on Ground situations. Learn how to expedite parts sourcing, what documentation you need, and how to work with suppliers.',
+    title: 'Planning a Turbine Outage: How to Avoid Last-Minute Parts Delays',
+    slug: 'planning-turbine-outage-avoid-parts-delays',
+    excerpt: 'Best practices for planning gas turbine outages and ensuring critical parts arrive on time. Learn how to avoid common procurement pitfalls that delay restarts.',
     author: 'AeroTurbineSpare Team',
     publishedAt: '2026-04-10',
     readingTime: '5 min read',
-    category: 'Emergency Response',
+    category: 'Outage Planning',
   },
 ];
 
@@ -73,10 +73,10 @@ export default function BlogPreviewSection() {
               <span className="w-6 h-px bg-brand" /> Resources <span className="w-6 h-px bg-brand" />
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-text">
-              Aerospace Industry Insights
+              Gas Turbine Industry Insights
             </h2>
             <p className="text-text-muted mt-2 max-w-xl">
-              Expert guides, MRO tips, and procurement best practices from our team of aerospace professionals.
+              Practical guides on turbine sourcing, control systems, and outage planning — written by people who've actually worked on these platforms.
             </p>
           </div>
           <Link

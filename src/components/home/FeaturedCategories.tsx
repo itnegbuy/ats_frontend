@@ -36,6 +36,9 @@ export default function FeaturedCategories({ categories }: { categories: Categor
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
               Browse Premium <span className="bg-gradient-to-r from-brand to-[#818CF8] bg-clip-text text-transparent">Categories</span>
             </h2>
+            <p className="text-slate-500 mt-2 max-w-xl text-sm">
+              Every category below is built around what turbine operators actually search for — by platform, by system, and by part type — not generic aerospace catalogs.
+            </p>
           </div>
           <Link href="/catalog" className="group/btn inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-orange transition-all duration-300 px-5 py-2.5 bg-white/80 border border-slate-200/80 backdrop-blur-md rounded-xl hover:shadow-md hover:-translate-y-0.5">
             <span>Explore Full Inventory</span>

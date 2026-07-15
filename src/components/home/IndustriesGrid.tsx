@@ -2,19 +2,18 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Plane, Shield, Car, Heart, Cpu, Radio, Package } from 'lucide-react';
+import { Zap, Flame, Ship, Factory, Shield, Package } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { Industry } from '@/types';
 import { request } from '@/lib/api-client';
 import fallbackIndustries from '@/data/industries-fallback.json';
 
 const INDUSTRY_ICONS: Record<string, React.ElementType> = {
-  plane: Plane,
+  zap: Zap,
+  flame: Flame,
+  ship: Ship,
+  factory: Factory,
   shield: Shield,
-  car: Car,
-  heart: Heart,
-  cpu: Cpu,
-  radio: Radio,
 };
 
 const INDUSTRY_COLORS = [
@@ -65,8 +64,8 @@ export default function IndustriesGrid() {
           <h2 className="text-3xl lg:text-4xl font-bold text-text">
             Industries We Supply
           </h2>
-          <p className="text-text-muted mt-3 max-w-2xl mx-auto">
-            Certified aerospace components for every critical sector — from commercial aviation to defense and beyond.
+          <p className="text-text-muted mt-3 max-w-3xl mx-auto">
+            Wherever a gas turbine is spinning, chances are we've already sourced a part for it. From baseload power plants to offshore platforms, we understand what each industry actually needs when a unit goes down.
           </p>
         </div>
 

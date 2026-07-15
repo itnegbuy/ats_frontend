@@ -109,9 +109,9 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: 'AeroTurbineSpare — Precision Aerospace Parts Sourcing',
+      name: 'Global Gas Turbine Services & Spare Parts Supplier | AeroTurbineSpare',
       description:
-        'Source certified aerospace parts fast. NSN, CAGE, turbine components, MRO supplies. ISO certified.',
+        'Global supplier of gas turbine spare parts and services for GE, Siemens, Rolls-Royce & Solar Turbines platforms. NSN/CAGE-referenced parts, 24-hr quotes, worldwide shipping.',
       url: 'https://aeroturbinespare.com',
       breadcrumb: {
         '@type': 'BreadcrumbList',
@@ -184,31 +184,18 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
             {/* Badge */}
             <div className="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-5 py-2 text-sm font-semibold text-white mb-8 shadow-lg">
               <span className="w-2 h-2 rounded-full bg-[#4ADE80] animate-pulse flex-shrink-0" />
-              {site.heroBadgeText || 'Trusted by 500+ Aviation Companies'}
+              {site.heroBadgeText || 'Gas Turbine Parts & Services — Global Inventory'}
             </div>
 
             {/* Heading */}
             <h1 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-black text-white leading-[1.1] mb-6 tracking-tight">
-              {site.heroHeading
-                ? site.heroHeading.split(',').map((part, i, arr) => (
-                    <span key={i}>
-                      {i === 1 ? <span className="gradient-text">{part}</span> : part}
-                      {i < arr.length - 1 ? ',' : ''}
-                      {i < arr.length - 1 && <br />}
-                    </span>
-                  ))
-                : (
-                  <>
-                    Source Aerospace Parts<br />
-                    <span className="gradient-text">with Confidence</span>
-                  </>
-                )}
+              Global <span className="gradient-text">Gas Turbine</span> Services &amp;<br />
+              Spare Parts Supplier
             </h1>
 
             {/* Sub-heading */}
             <p className="text-white/70 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 sm:mb-10 max-w-2xl">
-              {site.heroSubheading ||
-                'Global inventory of aviation, turbine, and defense components — NSN, CAGE, and part-number searchable in seconds.'}
+              We help power plants, oil &amp; gas operators, and industrial facilities keep their turbines running — with a global inventory of <strong>gas turbine spare parts</strong> and hands-on support across <strong>GE</strong>, <strong>Siemens</strong>, <strong>Rolls-Royce</strong>, <strong>Solar Turbines</strong>, <strong>Alstom</strong>, and <strong>Ansaldo Energia</strong> platforms. Search by part number, NSN, or CAGE code, and get a quote back the same day in most cases.
             </p>
 
             {/* ── Advanced Search Bar ── */}
@@ -322,7 +309,7 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
 
             {/* Quick-search tags */}
             <div className="flex flex-wrap gap-2 mb-8">
-              {['GE90 Turbine Blades', 'CFM56 Parts', 'Boeing 737 Components', 'NSN 2840-01'].map((tag) => (
+              {['GE Frame 7 Parts', 'Siemens SGT Blades', 'LM2500 Components', 'Speedtronic Mark VI'].map((tag) => (
                 <button
                   key={tag}
                   type="button"
@@ -355,11 +342,11 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
           {/* Trust chips — inline on mobile/tablet, right panel on xl+ */}
           <div className="xl:hidden grid grid-cols-2 sm:grid-cols-3 gap-3 mt-10 max-w-3xl">
             {[
-              { icon: ShieldCheck, label: 'ISO 9001 & AS9120B', sub: 'Quality Certified' },
-              { icon: Clock,       label: '24-Hr Quote Response', sub: 'SLA Guaranteed' },
-              { icon: Award,       label: 'Zero Counterfeit Policy', sub: 'Full Traceability' },
-              { icon: Truck,       label: '150+ Countries Served', sub: 'Global Logistics' },
-              { icon: Zap,         label: 'AOG Priority Response', sub: '4-Hour Escalation' },
+              { icon: ShieldCheck, label: 'AS9100 & AS9120 Certified', sub: 'Quality Management' },
+              { icon: Clock,       label: '24-Hour Quote Response', sub: 'Most Quotes Same Day' },
+              { icon: Award,       label: 'Zero Counterfeit Policy', sub: 'Verified Every Part' },
+              { icon: Truck,       label: '150+ Countries Served', sub: 'Global Logistics Network' },
+              { icon: Zap,         label: 'Turbine Outage Support', sub: 'Priority Response' },
             ].slice(0, 3).map(({ icon: Icon, label, sub }) => (
               <div key={label} className="flex items-center gap-2.5 bg-white/8 border border-white/12 rounded-xl px-3.5 py-2.5 backdrop-blur-sm">
                 <div className="w-8 h-8 rounded-lg bg-[#4F46E5]/30 flex items-center justify-center flex-shrink-0">
@@ -376,11 +363,11 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
           {/* Trust chips — desktop right panel */}
           <div className="hidden xl:flex flex-col gap-3 absolute right-8 top-1/2 -translate-y-1/2 w-64">
             {[
-              { icon: ShieldCheck, label: 'ISO 9001 & AS9120B', sub: 'Quality Certified' },
-              { icon: Clock,       label: '24-Hr Quote Response', sub: 'SLA Guaranteed' },
-              { icon: Award,       label: 'Zero Counterfeit Policy', sub: 'Full Traceability' },
-              { icon: Truck,       label: '150+ Countries Served', sub: 'Global Logistics' },
-              { icon: Zap,         label: 'AOG Priority Response', sub: '4-Hour Escalation' },
+              { icon: ShieldCheck, label: 'AS9100 & AS9120 Certified', sub: 'Quality Management' },
+              { icon: Clock,       label: '24-Hour Quote Response', sub: 'Most Quotes Same Day' },
+              { icon: Award,       label: 'Zero Counterfeit Policy', sub: 'Verified Every Part' },
+              { icon: Truck,       label: '150+ Countries Served', sub: 'Global Logistics Network' },
+              { icon: Zap,         label: 'Turbine Outage Support', sub: 'Priority Response' },
             ].map(({ icon: Icon, label, sub }) => (
               <div key={label} className="flex items-center gap-3 bg-white/8 border border-white/12 rounded-xl px-4 py-3 backdrop-blur-sm">
                 <div className="w-9 h-9 rounded-lg bg-[#4F46E5]/30 flex items-center justify-center flex-shrink-0">
@@ -399,7 +386,7 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
       <TrustBar />
       <BrandLogos />
       <IndustriesGrid />
-      <ZigZagDivider text="PARTS" />
+      <ZigZagDivider text="TURBINE" />
       <FeaturedCategories categories={categories} />
       <HowItWorks />
       <ZigZagDivider />
@@ -412,9 +399,9 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 text-[#4F46E5] text-sm font-semibold uppercase tracking-wider mb-2">
-                <span className="w-6 h-px bg-[#4F46E5]" /> Fresh Inventory
+                <span className="w-6 h-px bg-[#4F46E5]" /> Latest Inventory
               </div>
-              <h2 className="text-3xl font-bold text-[#0A1628]">Recently Added Parts</h2>
+              <h2 className="text-3xl font-bold text-[#0A1628]">Recently Added Turbine Parts</h2>
             </div>
             <Link href={c('/catalog')} className="text-sm font-medium text-[#4F46E5] hover:underline">
               View all →
@@ -435,7 +422,7 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
       <TestimonialsCarousel testimonials={testimonials} />
 
       {/* WHY US — ZigZag Divider + Conic Card */}
-      <ZigZagDivider text="ADVANTAGE" />
+      <ZigZagDivider text="WHY US" />
       <section className="py-20 bg-[#0A1628]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -455,10 +442,10 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
             >
               <div className="space-y-4">
                 {[
-                  { title: 'Full Traceability on Every Part', desc: 'Every component comes with complete documentation — 8130-3 tags, COCs, and material certifications.' },
-                  { title: 'Direct Access to Your Trader', desc: 'A dedicated account manager works every RFQ, ensuring you get the right part at the best price.' },
-                  { title: 'Hard-to-Find & Obsolete Parts', desc: 'We specialize in sourcing parts that other distributors cannot locate — legacy military and legacy commercial.' },
-                  { title: 'No Counterfeit Policy', desc: 'Stringent supplier qualification, incoming inspection, and chain-of-custody controls eliminate counterfeit risk.' },
+                  { title: 'Full Traceability on Every Part', desc: 'A documentation trail that doesn\'t have gaps, whether it\'s a new part or a repaired one.' },
+                  { title: 'Direct Access to Your Trader', desc: 'Talk to the same person every time, someone who already knows what platform you run.' },
+                  { title: 'Hard-to-Find & Obsolete Parts', desc: 'If your usual supplier said no, that\'s usually when we start. Legacy Mark V cards, discontinued combustion parts — we find them.' },
+                  { title: 'Zero Counterfeit Policy', desc: 'Verified sourcing on every single part, no shortcuts taken to hit a deadline.' },
                 ].map(({ title, desc }) => (
                   <div key={title} className="flex gap-3">
                     <div className="w-5 h-5 rounded-full bg-[#4F46E5] flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -483,10 +470,10 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
               />
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
                 {[
-                  { val: '100%', label: 'Inspection on Every Order' },
-                  { val: '< 24h', label: 'Average Quote Response' },
+                  { val: '100%', label: 'Certified on Every Part' },
+                  { val: '< 24h', label: 'Quote Turnaround' },
                   { val: 'AS9120', label: 'Quality Certification' },
-                  { val: 'Zero', label: 'Counterfeit Incidents' },
+                  { val: 'Zero', label: 'Counterfeit Policy' },
                 ].map(({ val, label }) => (
                   <div key={label} className="bg-white/8 border border-white/12 rounded-2xl p-4 sm:p-6 text-center">
                     <div className="text-xl sm:text-3xl font-black text-[#818CF8] mb-1">{val}</div>
@@ -512,7 +499,7 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-black text-white mb-3">Need a Part Urgently?</h2>
           <p className="text-white/85 text-lg mb-8 max-w-xl mx-auto">
-            AOG situations require immediate action. Our urgent team is on standby 24/7.
+            An unplanned outage doesn't wait for business hours. Our team is on standby around the clock to help you locate, confirm, and ship critical turbine parts — day or night.
           </p>
           <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
             <Link href={c('/rfq?urgency=urgent')} className="inline-block">
@@ -520,7 +507,7 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
             </Link>
             <a href="tel:+919354764587" className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-bold text-lg rounded-xl hover:bg-white/10 hover:border-white/50 transition-all">
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-              +91 9354764587
+              +91 8304784587
             </a>
           </div>
         </div>

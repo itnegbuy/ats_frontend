@@ -41,7 +41,7 @@ export default function QuickQuoteForm() {
           </div>
           <h3 className="text-2xl font-bold text-white mb-2">Quote Request Received!</h3>
           <p className="text-white/70 max-w-md mx-auto">
-            We&apos;ll review your request and get back to you within 24 hours with pricing and availability.
+            We&apos;ll come back with pricing and availability, usually the same day.
           </p>
         </div>
       </section>
@@ -72,7 +72,7 @@ export default function QuickQuoteForm() {
               <span className="gradient-text">Parts Quote</span>
             </h2>
             <p className="text-white/70 text-base leading-relaxed max-w-md">
-              Submit your part number and quantity. Our team will respond with competitive pricing and lead time within hours.
+              Give us your part number and quantity — we'll come back with pricing and availability, usually the same day.
             </p>
             <div className="mt-8 space-y-3">
               {[

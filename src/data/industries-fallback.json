@@ -1,6 +1,8 @@
 [
-  { "id": "ind-03", "name": "Aircraft Components & Accessories", "slug": "aircraft-components-accessories", "icon": "plane", "description": "Structural components, actuation systems, and avionics accessories for fixed and rotary-wing aircraft.", "partCount": 15200 },
-  { "id": "ind-04", "name": "Automotive & Ground Systems", "slug": "automotive", "icon": "car", "description": "Precision drivetrain, powertrain, and ground support equipment components.", "partCount": 6400 },
-  { "id": "ind-05", "name": "Electronics & Avionics", "slug": "electronics", "icon": "cpu", "description": "Avionics units, connectors, wiring harnesses, and electronic control modules.", "partCount": 8300 },
-  { "id": "ind-06", "name": "Communications & Radar", "slug": "communications", "icon": "radio", "description": "RF systems, radar assemblies, and communication equipment for aviation and defense.", "partCount": 5100 }
+  { "id": "ind-pg", "name": "Power Generation", "slug": "power-generation", "icon": "zap", "description": "Gas turbine spare parts and field support for baseload, peaking, and combined-cycle power plants running GE Frame and Siemens SGT units.", "partCount": 12500 },
+  { "id": "ind-og", "name": "Oil & Gas", "slug": "oil-gas", "icon": "flame", "description": "Turbine support for onshore and offshore operations, including LM2500 and LM6000 aeroderivative platforms used in compression and power applications.", "partCount": 9800 },
+  { "id": "ind-marine", "name": "Marine & Offshore", "slug": "marine-offshore", "icon": "ship", "description": "Parts and technical support for marine gas turbine installations, where downtime isn't an option.", "partCount": 4200 },
+  { "id": "ind-industrial", "name": "Industrial Manufacturing", "slug": "industrial-manufacturing", "icon": "factory", "description": "Industrial gas turbine services for facilities running captive power and cogeneration units.", "partCount": 5600 },
+  { "id": "ind-utilities", "name": "Utilities & Cogeneration", "slug": "utilities-cogeneration", "icon": "zap", "description": "Reliable sourcing for utility-scale operators managing large turbine fleets across multiple sites.", "partCount": 7300 },
+  { "id": "ind-defense-power", "name": "Government & Defense Power", "slug": "government-defense-power", "icon": "shield", "description": "NSN and CAGE-referenced turbine components for defense and government power installations, sourced with full documentation.", "partCount": 3400 }
 ]

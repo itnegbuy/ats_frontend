@@ -59,7 +59,7 @@ export default function StatsCounter() {
             <span className="w-6 h-px bg-[#818CF8]" /> By the Numbers <span className="w-6 h-px bg-[#818CF8]" />
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-white">Trusted by Industry Leaders</h2>
-          <p className="text-silver/70 mt-3 max-w-2xl mx-auto">Numbers that reflect our commitment to aerospace excellence</p>
+          <p className="text-silver/70 mt-3 max-w-2xl mx-auto">Numbers built on years of sourcing and supporting gas turbine services for operators who can't afford unplanned downtime.</p>
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {STATS.map((s) => <StatItem key={s.label} {...s} start={started} />)}
