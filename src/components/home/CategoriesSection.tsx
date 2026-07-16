@@ -45,6 +45,10 @@ function getGroupColor(group: string) {
   return GROUP_COLORS[group] || { bg: 'bg-slate-50', text: 'text-slate-700', border: 'border-slate-200', dot: 'bg-slate-500' };
 }
 
+function groupSlug(name: string) {
+  return name.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+}
+
 export default function CategoriesSection() {
   const [activeGroup, setActiveGroup] = useState<string | null>(null);
 
@@ -71,7 +75,7 @@ export default function CategoriesSection() {
             Browse by Product Category
           </h2>
           <p className="text-[#4A4A6A] max-w-2xl mx-auto text-base">
-            Find exactly what you need — organized by turbine platform, component type, or procurement method.
+            Browse by turbine platform, component type, or procurement method. Whatever works for you.
           </p>
         </div>
 
@@ -108,6 +112,35 @@ export default function CategoriesSection() {
           })}
         </div>
 
+        {/* Active group banner */}
+        {activeGroup && (
+          <div className="relative mb-10 rounded-2xl overflow-hidden h-48 sm:h-56">
+            <img
+              src={`/images/categories/banner-${groupSlug(activeGroup)}.jpg`}
+              alt={activeGroup}
+              className="w-full h-full object-cover"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/50 to-transparent flex items-center px-8">
+              <div>
+                <div className={cn(
+                  'inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3',
+                  getGroupColor(activeGroup).bg,
+                  getGroupColor(activeGroup).text
+                )}>
+                  {activeGroup}
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                  {activeGroup}
+                </h3>
+                <p className="text-white/70 text-sm max-w-lg">
+                  {filtered.length} categories &middot; {filtered.reduce((s, c) => s + c.partCount, 0).toLocaleString()} parts
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Categories grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {filtered.slice(0, 12).map((cat) => {
@@ -117,36 +150,39 @@ export default function CategoriesSection() {
               <Link
                 key={cat.id}
                 href={`/catalog?category=${cat.slug}`}
-                className="group relative bg-white rounded-2xl border border-silver/80 hover:border-brand/30 p-5 transition-all duration-300 hover:shadow-[0_8px_30px_-12px_rgba(79,70,229,0.15)] hover:-translate-y-0.5 overflow-hidden"
+                className="group relative bg-white rounded-2xl border border-silver/80 hover:border-brand/30 transition-all duration-300 hover:shadow-[0_8px_30px_-12px_rgba(79,70,229,0.15)] hover:-translate-y-0.5 overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-brand/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="flex items-start gap-4">
-                  <div className={cn(
-                    'w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3',
-                    colors.bg
-                  )}>
-                    <Icon className={cn('w-6 h-6', colors.text)} />
+                {/* Category image as card header */}
+                <div className="relative h-36 overflow-hidden bg-silver/30">
+                  <img
+                    src={cat.image || `/images/categories/banner-${groupSlug(cat.group)}.jpg`}
+                    alt={cat.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+                  <div className="absolute top-3 left-3">
+                    <span className={cn('text-[10px] font-semibold uppercase tracking-wider px-2 py-1 rounded-full shadow-sm', colors.bg, colors.text)}>
+                      {cat.group}
+                    </span>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className={cn('text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded', colors.bg, colors.text)}>
-                        {cat.group}
-                      </span>
-                    </div>
-                    <h3 className="font-bold text-sm text-[#0A1628] group-hover:text-brand transition-colors leading-snug mb-1">
-                      {cat.name}
-                    </h3>
-                    <p className="text-xs text-[#4A4A6A]/70 leading-relaxed line-clamp-2">
-                      {cat.description}
-                    </p>
-                    <div className="flex items-center justify-between mt-3 pt-3 border-t border-silver/60">
-                      <span className="text-[11px] font-semibold text-emerald-600">
-                        {cat.partCount.toLocaleString()} parts
-                      </span>
-                      <span className="text-brand/60 group-hover:text-brand transition-colors">
-                        <ChevronRight className="w-4 h-4" />
-                      </span>
-                    </div>
+                </div>
+
+                <div className="p-4">
+                  <h3 className="font-bold text-sm text-[#0A1628] group-hover:text-brand transition-colors leading-snug mb-1">
+                    {cat.name}
+                  </h3>
+                  <p className="text-xs text-[#4A4A6A]/70 leading-relaxed line-clamp-2 mb-3">
+                    {cat.description}
+                  </p>
+                  <div className="flex items-center justify-between pt-3 border-t border-silver/60">
+                    <span className="text-[11px] font-semibold text-emerald-600">
+                      {cat.partCount.toLocaleString()} parts
+                    </span>
+                    <span className="text-brand/60 group-hover:text-brand transition-colors">
+                      <ChevronRight className="w-4 h-4" />
+                    </span>
                   </div>
                 </div>
               </Link>

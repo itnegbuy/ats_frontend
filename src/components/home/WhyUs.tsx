@@ -27,7 +27,7 @@ const FEATURES = [
   {
     icon: Search,
     title: 'Hard-to-Find Parts Specialists',
-    desc: 'Obsolete Mark V cards, discontinued combustion parts, legacy components — this is where we actually earn our keep.',
+    desc: 'Obsolete Mark V cards, discontinued combustion parts, legacy components. This is where we really earn our keep.',
   },
   {
     icon: HeadphonesIcon,
@@ -58,7 +58,7 @@ export default function WhyUs() {
             Built for Turbine Procurement Professionals
           </h2>
           <p className="text-text-muted mt-3 max-w-2xl mx-auto">
-            We built this around what turbine buyers actually deal with — long lead times, obsolete parts, and the pressure of an outage clock running.
+            We built this around what turbine buyers deal with every day. Long lead times, obsolete parts, the pressure of an outage clock running. That is why we exist.
           </p>
         </div>
 

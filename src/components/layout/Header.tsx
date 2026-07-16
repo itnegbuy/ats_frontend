@@ -211,6 +211,7 @@ export default function Header() {
           { label: 'Request a Quote', href: '/rfq', icon: FileText, desc: 'Submit an RFQ — get pricing within 24 hours' },
           { label: 'Cross-Reference Tool', href: '/cross-reference', icon: Search, desc: 'Find equivalent parts across OEMs' },
           { label: 'Sell Us Your Inventory', href: '/inventory', icon: ShoppingBasketIcon, desc: 'Turn excess stock into cash' },
+          { label: 'View All Categories', href: '/categories', icon: Grid3X3, desc: 'Browse 120+ product categories' },
         ],
       },
     ],
@@ -499,7 +500,7 @@ export default function Header() {
                       ? 'opacity-100 scale-100 pointer-events-auto translate-y-0'
                       : 'opacity-0 scale-95 pointer-events-none -translate-y-2'
                   )}
-                  style={{ minWidth: 'min(920px, calc(100vw - 2rem))' }}
+                  style={{ minWidth: 'min(1150px, calc(100vw - 2rem))', maxWidth: 'calc(100vw - 2rem)' }}
                 >
                   <div className="flex">
                     {/* Sections */}

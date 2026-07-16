@@ -54,7 +54,7 @@ export default function SubscribeForm() {
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Stay Updated on New Inventory</h2>
           <p className="text-white/60 text-sm mb-8 max-w-md mx-auto">
-            Get notified when new turbine parts and platforms are added to our inventory — no generic aerospace updates, just what's relevant to your fleet.
+            Get notified when new turbine parts and platforms hit our inventory. No generic updates, just what matters for your fleet.
           </p>
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
             <input

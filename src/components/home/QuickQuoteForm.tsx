@@ -72,7 +72,7 @@ export default function QuickQuoteForm() {
               <span className="gradient-text">Parts Quote</span>
             </h2>
             <p className="text-white/70 text-base leading-relaxed max-w-md">
-              Give us your part number and quantity — we'll come back with pricing and availability, usually the same day.
+              Drop your part number and quantity. We will get back with pricing and availability, usually the same day.
             </p>
             <div className="mt-8 space-y-3">
               {[

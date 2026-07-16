@@ -144,9 +144,9 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
         {/* Background image overlay for hero */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <img
-            src="/images/hero-bg.svg"
-            alt="Aerospace turbine engine components background"
-            className="w-full h-full object-cover opacity-15"
+            src="/images/hero-bg.jpg"
+            alt="Industrial gas turbine engine components and parts"
+            className="w-full h-full object-cover opacity-20"
             loading="eager"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
           />
@@ -170,10 +170,10 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
         <div className="absolute top-0 left-1/2 w-[12rem] sm:w-[18rem] h-[12rem] sm:h-[18rem] bg-[#818CF8]/10 rounded-full blur-3xl pointer-events-none" />
 
         {/* Decorative image - right side on large screens */}
-        <div className="hidden xl:block absolute right-0 bottom-0 w-[45%] h-full pointer-events-none opacity-25">
+        <div className="hidden xl:block absolute right-0 bottom-0 w-[50%] h-full pointer-events-none opacity-30">
           <img
-            src="/images/hero-turbine.svg"
-            alt="Jet turbine engine illustration"
+            src="/images/hero-turbine.jpg"
+            alt="Gas turbine engine rotor and blade assembly"
             className="w-full h-full object-contain object-right-bottom"
             loading="lazy"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
@@ -185,18 +185,18 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
             {/* Badge */}
             <div className="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-5 py-2 text-sm font-semibold text-white mb-8 shadow-lg">
               <span className="w-2 h-2 rounded-full bg-[#4ADE80] animate-pulse flex-shrink-0" />
-              {site.heroBadgeText || 'Gas Turbine Parts & Services — Global Inventory'}
+              {site.heroBadgeText || 'Gas Turbine Parts & Services. Global Inventory.'}
             </div>
 
             {/* Heading */}
             <h1 className="text-3xl sm:text-5xl lg:text-[3.5rem] font-black text-white leading-[1.1] mb-6 tracking-tight">
-              Global <span className="gradient-text">Gas Turbine</span> Services &amp;<br />
-              Spare Parts Supplier
+              <span className="gradient-text">Gas Turbine</span> Parts &amp; Services<br />
+              When You Need Them Most
             </h1>
 
             {/* Sub-heading */}
             <p className="text-white/70 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 sm:mb-10 max-w-2xl">
-              We help power plants, oil &amp; gas operators, and industrial facilities keep their turbines running — with a global inventory of <strong>gas turbine spare parts</strong> and hands-on support across <strong>GE</strong>, <strong>Siemens</strong>, <strong>Rolls-Royce</strong>, <strong>Solar Turbines</strong>, <strong>Alstom</strong>, and <strong>Ansaldo Energia</strong> platforms. Search by part number, NSN, or CAGE code, and get a quote back the same day in most cases.
+              Power plants, offshore platforms, pipelines. Wherever a turbine is running, we supply the parts to keep it going. GE, Siemens, Rolls-Royce, Solar Turbines, Alstom, Ansaldo. Search by part number, NSN, or CAGE code. Most quotes come back the same day.
             </p>
 
             {/* ── Advanced Search Bar ── */}
@@ -398,7 +398,7 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
       {/* LATEST PARTS */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 text-[#4F46E5] text-sm font-semibold uppercase tracking-wider mb-2">
                 <span className="w-6 h-px bg-[#4F46E5]" /> Latest Inventory
@@ -409,13 +409,30 @@ export default function HomePage({ params }: { params: Promise<{ country?: strin
               View all →
             </Link>
           </div>
+
+          {/* Category tabs */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {['All', 'LM2500', 'LM6000', 'GE Frame', 'Siemens', 'Combustion', 'Controls', 'Bearings', 'Bently Nevada'].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => {
+                  if (cat === 'All') router.push(c('/catalog'));
+                  else router.push(`${c('/catalog')}?category=${cat.toLowerCase().replace(/\s+/g, '-')}`);
+                }}
+                className="px-4 py-2 text-xs font-semibold rounded-full border border-silver bg-white text-[#4A4A6A] hover:border-[#4F46E5] hover:text-[#4F46E5] transition-all"
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
           {loading ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {Array.from({ length: 8 }).map((_, i) => <SkeletonCard key={i} />)}
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {products.map((p) => <PartCard key={p.id} product={p} />)}
+              {products.slice(0, 8).map((p) => <PartCard key={p.id} product={p} />)}
             </div>
           )}
         </div>

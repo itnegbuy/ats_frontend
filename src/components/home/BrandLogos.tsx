@@ -3,14 +3,14 @@
 import { useState, useEffect, useRef } from 'react';
 
 const BRAND_LOGOS = [
-  { name: 'General Electric', domain: 'ge.com' },
-  { name: 'Pratt & Whitney', domain: 'prattwhitney.com' },
-  { name: 'Rolls-Royce', domain: 'rolls-royce.com' },
-  { name: 'Honeywell', domain: 'honeywell.com' },
-  { name: 'Boeing', domain: 'boeing.com' },
-  { name: 'Airbus', domain: 'airbus.com' },
-  { name: 'Siemens', domain: 'siemens.com' },
-  { name: 'Collins Aerospace', domain: 'collinsaerospace.com' },
+  { name: 'General Electric', file: 'ge.png' },
+  { name: 'Pratt & Whitney', file: 'pratt-whitney.png' },
+  { name: 'Rolls-Royce', file: 'rolls-royce.png' },
+  { name: 'Honeywell', file: 'honeywell.png' },
+  { name: 'Boeing', file: 'boeing.png' },
+  { name: 'Airbus', file: 'airbus.png' },
+  { name: 'Siemens', file: 'siemens.png' },
+  { name: 'Collins Aerospace', file: 'collins-aerospace.png' },
 ];
 
 export default function BrandLogos() {
@@ -34,7 +34,7 @@ export default function BrandLogos() {
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-text">Trusted by Global Manufacturers</h2>
           <p className="text-text-muted mt-3 max-w-3xl mx-auto text-sm">
-            We work across every major turbine OEM platform in service today — supplying and supporting operators running General Electric, Siemens, Rolls-Royce, Solar Turbines, Alstom, Ansaldo Energia, and Pratt &amp; Whitney aeroderivative units.
+            We supply parts for every major turbine OEM in service today. General Electric, Siemens, Rolls-Royce, Solar Turbines, Alstom, Ansaldo Energia, and Pratt &amp; Whitney aeroderivative units. If it spins, we probably have parts for it.
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
@@ -45,7 +45,7 @@ export default function BrandLogos() {
             >
               <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center overflow-hidden">
                 <img
-                  src={`https://logo.clearbit.com/${brand.domain}`}
+                  src={`/images/brands/${brand.file}`}
                   alt={brand.name}
                   className="w-8 h-8 object-contain"
                   loading="lazy"

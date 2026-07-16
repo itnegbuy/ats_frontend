@@ -76,7 +76,7 @@ export default function BlogPreviewSection() {
               Gas Turbine Industry Insights
             </h2>
             <p className="text-text-muted mt-2 max-w-xl">
-              Practical guides on turbine sourcing, control systems, and outage planning — written by people who've actually worked on these platforms.
+              Practical guides on turbine sourcing, control systems, and outage planning. Written by people who have actually worked on these platforms.
             </p>
           </div>
           <Link

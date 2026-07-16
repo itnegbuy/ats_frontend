@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'About AeroTurbineSpare',
   description: 'Founded in 2009, AeroTurbineSpare is an ISO 9001 & AS9120 certified aerospace parts distributor serving OEMs, MROs, and defense contractors across 150+ countries. 5 Million+ parts in catalog.',
   openGraph: {
-    title: 'About AeroTurbineSpare — Precision Aerospace Parts Sourcing',
+    title: 'About AeroTurbineSpare | Precision Aerospace Parts Sourcing',
     description: 'Founded in 2009. ISO 9001 & AS9120 certified. Serving 150+ countries. Your trusted partner for certified aerospace parts.',
   },
 };
@@ -111,7 +111,7 @@ export default function AboutPage() {
               About AeroTurbineSpare
             </h1>
             <p className="text-silver/80 text-xl max-w-2xl mx-auto leading-relaxed">
-              Your trusted partner for precision aerospace parts — certified,
+              Your trusted partner for precision aerospace parts. Certified,
               traceable, and delivered on time, every time.
             </p>
           </div>
@@ -133,9 +133,9 @@ export default function AboutPage() {
                   <p>
                     AeroTurbineSpare was founded in 2009 by a team of aerospace
                     procurement veterans who experienced firsthand the frustration
-                    of sourcing certified parts under AOG pressure. Headquartered
-                    in Doral, Florida — at the crossroads of Americas and Atlantic
-                    trade routes — we set out to build the platform we always wished
+                    of sourcing certified parts under AOG pressure.                     Headquartered
+                    in Doral, Florida, right at the crossroads of the Americas.
+                    We set out to build the platform we always wished
                     existed.
                   </p>
                   <p>
@@ -194,7 +194,7 @@ export default function AboutPage() {
                 <p className="text-silver/80 leading-relaxed">
                   To provide aerospace procurement professionals with instant access
                   to quality-assured parts, backed by full traceability and the
-                  industry&apos;s highest certification standards — so that no aircraft
+                  industry certification standards, so that no aircraft
                   stays on the ground for lack of a genuine, certified component.
                 </p>
               </div>
@@ -206,7 +206,7 @@ export default function AboutPage() {
                   The Global Standard for Aerospace Parts Trust
                 </h3>
                 <p className="text-text-muted leading-relaxed">
-                  To become the world&apos;s most trusted aerospace parts marketplace —
+                  To become the world&apos;s most trusted aerospace parts marketplace,
                   where every OEM, MRO, airline, and defense contractor instinctively
                   turns when they need a part fast, certified, and at a fair price,
                   regardless of geography or platform age.

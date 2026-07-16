@@ -118,9 +118,9 @@ export default function CatalogPage({
   const [sort, setSort]           = useState(String(resolvedParams.sort || 'relevance'));
   const [view, setView]           = useState<ViewMode>(() => {
     const v = resolvedParams.view;
-    if (v === 'list') return 'listview';
+    if (v === 'grid') return 'grid3';
     if (v === 'card') return 'cardview';
-    return 'grid3';
+    return 'listview';
   });
   const [loading, setLoading]     = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -188,7 +188,7 @@ export default function CatalogPage({
     if (filters.industry)     p.set('industry', filters.industry);
     if (page > 1)             p.set('page', String(page));
     if (sort !== 'relevance') p.set('sort', sort);
-    if (view === 'listview') p.set('view', 'list');
+    if (view === 'grid3') p.set('view', 'grid');
     else if (view === 'cardview') p.set('view', 'card');
     const url = `/catalog${p.toString() ? '?' + p.toString() : ''}`;
     window.history.replaceState(null, '', url);

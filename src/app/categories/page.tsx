@@ -3,22 +3,13 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import {
-  Plane, Settings, Flame, Fuel, Activity, Cpu, Radio,
-  Thermometer, Shield, Zap, Package, Hash, BadgeCheck, Search,
-  Anchor, ChevronRight, Search as SearchIcon, Grid3X3, ArrowRight,
+  ChevronRight, Search as SearchIcon, Grid3X3, ArrowRight,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import siteCategories from '@/data/site-categories.json';
-
-const ICON_MAP: Record<string, React.ElementType> = {
-  plane: Plane, settings: Settings, flame: Flame, fuel: Fuel,
-  activity: Activity, cpu: Cpu, radio: Radio, thermometer: Thermometer,
-  shield: Shield, zap: Zap, package: Package, hash: Hash,
-  badgecheck: BadgeCheck, search: Search, anchor: Anchor,
-};
 
 const GROUP_COLORS: Record<string, { bg: string; text: string; border: string; dot: string; light: string }> = {
   'Aero-Derivative Gas Turbines': {
@@ -187,6 +178,28 @@ export default function CategoriesPage() {
               </div>
             ) : (
               <div className="space-y-8">
+                {/* Active group banner */}
+                {activeGroup && (
+                  <div className="relative rounded-2xl overflow-hidden h-48 sm:h-56 mb-8">
+                    <img
+                      src={`/images/categories/banner-${groupSlug(activeGroup)}.jpg`}
+                      alt={activeGroup}
+                      className="w-full h-full object-cover"
+                      onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/50 to-transparent flex items-center px-8">
+                      <div>
+                        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                          {activeGroup}
+                        </h3>
+                        <p className="text-white/70 text-sm">
+                          {filtered.length} categories &middot; {filtered.reduce((s, c) => s + c.partCount, 0).toLocaleString()} parts
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 {/* Grouped display when showing all */}
                 {activeGroup
                   ? (
@@ -200,14 +213,24 @@ export default function CategoriesPage() {
                       if (!groupCats.length) return null;
                       const colors = getGroupColor(group);
                       return (
-                        <div key={group}>
-                          <div className="flex items-center gap-3 mb-5 pb-3 border-b border-silver">
-                            <span className={cn('w-3 h-3 rounded-full', colors.dot)} />
-                            <h2 className="text-lg font-bold text-navy">{group}</h2>
-                            <span className="text-xs text-text-muted bg-white px-2.5 py-0.5 rounded-full border border-silver">
-                              {groupCats.length} categories
-                            </span>
-                          </div>
+                          <div key={group}>
+                            <div className="relative rounded-xl overflow-hidden h-32 sm:h-40 mb-5">
+                              <img
+                                src={`/images/categories/banner-${groupSlug(group)}.jpg`}
+                                alt={group}
+                                className="w-full h-full object-cover"
+                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/40 to-transparent flex items-center px-6">
+                                <div className="flex items-center gap-3">
+                                  <span className={cn('w-3 h-3 rounded-full', colors.dot)} />
+                                  <h2 className="text-xl font-bold text-white">{group}</h2>
+                                  <span className="text-xs text-white/60 bg-white/10 px-2.5 py-0.5 rounded-full">
+                                    {groupCats.length} categories
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
                           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                             {groupCats.map((cat) => <CategoryCard key={cat.id} cat={cat} compact />)}
                           </div>
@@ -254,52 +277,86 @@ export default function CategoriesPage() {
   );
 }
 
-function CategoryCard({ cat, compact }: { cat: typeof siteCategories[0]; compact?: boolean }) {
-  const Icon = ICON_MAP[cat.icon] || Package;
-  const colors = getGroupColor(cat.group);
+function groupSlug(name: string) {
+  return name.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+}
 
-  return (
-    <Link
-      href={`/catalog?category=${cat.slug}`}
-      className={cn(
-        'group relative bg-white rounded-2xl border border-silver/80 hover:border-brand/30 transition-all duration-300 overflow-hidden',
-        compact ? 'p-4' : 'p-6 hover:shadow-[0_8px_30px_-12px_rgba(79,70,229,0.12)] hover:-translate-y-0.5'
-      )}
-    >
-      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-brand/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className={cn('flex', compact ? 'items-center gap-3' : 'items-start gap-4')}>
-        <div className={cn(
-          'rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3',
-          colors.light,
-          compact ? 'w-10 h-10' : 'w-12 h-12'
-        )}>
-          <Icon className={cn(compact ? 'w-5 h-5' : 'w-6 h-6', colors.text)} />
+function CategoryCard({ cat, compact }: { cat: typeof siteCategories[0]; compact?: boolean }) {
+  const colors = getGroupColor(cat.group);
+  const imageSrc = cat.image || `/images/categories/banner-${groupSlug(cat.group)}.jpg`;
+
+  if (compact) {
+    return (
+      <Link
+        href={`/catalog?category=${cat.slug}`}
+        className="group relative bg-white rounded-2xl border border-silver/80 hover:border-brand/30 transition-all duration-300 overflow-hidden hover:shadow-[0_8px_30px_-12px_rgba(79,70,229,0.12)] hover:-translate-y-0.5"
+      >
+        {/* Image strip on top */}
+        <div className="h-24 overflow-hidden bg-silver/30">
+          <img
+            src={imageSrc}
+            alt={cat.name}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
+            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent" />
         </div>
-        <div className="flex-1 min-w-0">
-          {!compact && (
-            <span className={cn('text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded inline-block mb-1.5', colors.light, colors.text)}>
-              {cat.group}
-            </span>
-          )}
-          <h3 className={cn(
-            'font-bold text-navy group-hover:text-brand transition-colors leading-snug',
-            compact ? 'text-sm' : 'text-sm'
-          )}>
+        <div className="p-3">
+          <span className={cn('text-[10px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded inline-block mb-1.5', colors.light, colors.text)}>
+            {cat.group}
+          </span>
+          <h3 className="font-bold text-sm text-navy group-hover:text-brand transition-colors leading-snug">
             {cat.name}
           </h3>
-          {!compact && (
-            <p className="text-xs text-text-muted/70 leading-relaxed line-clamp-2 mt-1">
-              {cat.description}
-            </p>
-          )}
-          <div className={cn('flex items-center justify-between', compact ? 'mt-0' : 'mt-3 pt-3 border-t border-silver/60')}>
+          <div className="flex items-center justify-between mt-2 pt-2 border-t border-silver/60">
             <span className="text-[11px] font-semibold text-emerald-600">
               {cat.partCount.toLocaleString()} parts
             </span>
             <span className="text-brand/40 group-hover:text-brand transition-colors">
-              <ChevronRight className={cn(compact ? 'w-3.5 h-3.5' : 'w-4 h-4')} />
+              <ChevronRight className="w-3.5 h-3.5" />
             </span>
           </div>
+        </div>
+      </Link>
+    );
+  }
+
+  return (
+    <Link
+      href={`/catalog?category=${cat.slug}`}
+      className="group relative bg-white rounded-2xl border border-silver/80 hover:border-brand/30 transition-all duration-300 overflow-hidden hover:shadow-[0_8px_30px_-12px_rgba(79,70,229,0.12)] hover:-translate-y-0.5"
+    >
+      {/* Category image header */}
+      <div className="h-40 overflow-hidden bg-silver/30">
+        <img
+          src={imageSrc}
+          alt={cat.name}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          loading="lazy"
+          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent" />
+        <div className="absolute top-3 left-3">
+          <span className={cn('text-[10px] font-semibold uppercase tracking-wider px-2 py-1 rounded-full shadow-sm', colors.light, colors.text)}>
+            {cat.group}
+          </span>
+        </div>
+      </div>
+      <div className="p-5">
+        <h3 className="font-bold text-sm text-navy group-hover:text-brand transition-colors leading-snug mb-1">
+          {cat.name}
+        </h3>
+        <p className="text-xs text-text-muted/70 leading-relaxed line-clamp-2 mb-3">
+          {cat.description}
+        </p>
+        <div className="flex items-center justify-between pt-3 border-t border-silver/60">
+          <span className="text-[11px] font-semibold text-emerald-600">
+            {cat.partCount.toLocaleString()} parts
+          </span>
+          <span className="text-brand/40 group-hover:text-brand transition-colors">
+            <ChevronRight className="w-4 h-4" />
+          </span>
         </div>
       </div>
     </Link>

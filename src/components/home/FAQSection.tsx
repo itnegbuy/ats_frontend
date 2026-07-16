@@ -5,34 +5,34 @@ import { ChevronDown } from 'lucide-react';
 
 const FAQS = [
   {
-    question: 'What certifications do your gas turbine parts carry?',
+    question: 'What paperwork comes with your parts?',
     answer:
-      'Every part ships with AS9100 and AS9120-backed documentation, plus manufacturer certificates of conformance and material traceability where applicable — provided upfront with your quote, not after you\'ve already paid.',
+      'Every part ships with AS9100 and AS9120 documentation, plus manufacturer certificates and material traceability. We share all of this with your quote, not after you have already paid.',
   },
   {
-    question: 'How fast can I get a quote?',
+    question: 'How fast can you get me a quote?',
     answer:
-      'Most requests get a response within 24 hours. For an unplanned outage, we prioritize same-day turnaround wherever we can.',
+      'Most requests get a response within 24 hours. If you have an unplanned outage, let us know and we will try to turn it around the same day.',
   },
   {
-    question: 'Do you ship internationally?',
+    question: 'Do you ship outside the US?',
     answer:
-      'Yes, to 150+ countries. We handle the export documentation that comes with shipping turbine and control system components, including anything with dual-use restrictions.',
+      'Yes, we ship to over 150 countries. We handle the export paperwork for turbine and control system components, including items with dual-use restrictions.',
   },
   {
-    question: 'What is a CAGE code and why is it important?',
+    question: 'What is a CAGE code and why does it matter?',
     answer:
-      'It\'s a unique identifier for the manufacturer or supplier of a part, used heavily in defense and government procurement. For turbine buyers, it matters because it confirms you\'re getting the part from the entity that actually made or certified it — not a lookalike from an unverified source.',
+      'It is a unique ID for the manufacturer or supplier of a part, used in defense and government procurement. For turbine buyers, it confirms you are getting the part from the company that actually made it, not a lookalike from some unverified source.',
   },
   {
-    question: 'How do you ensure parts are counterfeit-free?',
+    question: 'How do you stop counterfeit parts?',
     answer:
-      'Every part goes through inspection and documentation checks before it ships. If we can\'t verify where a part came from, we don\'t carry it — even if it\'s in high demand.',
+      'Every part goes through inspection and documentation checks before it ships. If we cannot verify where a part came from, we do not stock it, no matter how badly someone needs it.',
   },
   {
-    question: 'Can you source hard-to-find or obsolete turbine parts?',
+    question: 'Can you find obsolete or discontinued parts?',
     answer:
-      'This is honestly where we\'re strongest. Legacy Mark V control cards, discontinued combustion hardware, older Speedtronic components — our network of 1,200+ manufacturers and distributors means we\'re often able to find what other suppliers have stopped trying to.',
+      'That is actually where we do our best work. Legacy Mark V control cards, discontinued combustion hardware, older Speedtronic components. Our network of 1,200 suppliers means we can often find parts that other distributors have given up on.',
   },
 ];
 
@@ -51,7 +51,7 @@ export default function FAQSection() {
               Frequently Asked Questions
             </h2>
             <p className="text-text-muted">
-              Straight answers about sourcing gas turbine parts — no fluff, no jargon.
+              Straight answers about sourcing gas turbine parts. No fluff, no jargon.
             </p>
           </div>
 

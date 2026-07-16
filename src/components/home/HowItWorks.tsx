@@ -5,13 +5,13 @@ const STEPS = [
     icon: Search,
     step: '01',
     title: 'Search or Submit RFQ',
-    desc: 'Give us your part number, NSN, CAGE code, or just tell us the platform and system — GE Mark VIe, LM2500, Frame 7, whatever it is.',
+    desc: 'Share your part number, NSN, CAGE code, or just tell us the platform. GE Mark VIe, LM2500, Frame 7, whatever you are working with.',
   },
   {
     icon: FileText,
     step: '02',
     title: 'Receive Your Quote',
-    desc: 'Our team, who actually knows these platforms, gets back to you with pricing, availability, and documentation — usually within 24 hours.',
+    desc: 'Our team gets back to you with pricing, availability, and documentation. Usually within 24 hours, sometimes the same day.',
   },
   {
     icon: CheckCircle,
