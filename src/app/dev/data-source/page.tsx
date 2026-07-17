@@ -2,13 +2,12 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import {
-  Database, Cloud, Upload, Download, RefreshCw, Trash2,
+  Database, Cloud, Upload, RefreshCw,
   Server, HardDrive, CheckCircle2, AlertTriangle, FileSpreadsheet,
 } from 'lucide-react';
 import { useDataSource } from '@/lib/data-source';
 import { getFallbackStats, seedFallbackData, importExcelData } from '@/lib/fallback-router';
 import toast from 'react-hot-toast';
-import * as XLSX from 'xlsx';
 
 interface FallbackStats {
   products: number;
@@ -62,6 +61,7 @@ export default function DataSourcePage() {
 
     setUploading(true);
     try {
+      const XLSX = await import('xlsx');
       const buffer = await file.arrayBuffer();
       const workbook = XLSX.read(buffer, { type: 'array' });
       const sheetName = workbook.SheetNames[0];
@@ -83,7 +83,8 @@ export default function DataSourcePage() {
     }
   };
 
-  const handleDownloadTemplate = () => {
+  const handleDownloadTemplate = async () => {
+    const XLSX = await import('xlsx');
     const headers = [
       'partNumber', 'nsn', 'cage', 'description', 'shortDescription',
       'manufacturer', 'category', 'fsg', 'fsc', 'condition',

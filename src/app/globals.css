@@ -72,6 +72,72 @@ html {
 }
 
 /* ══════════════════════════════════════════════════════════════
+   AeroLogo CSS animations (replaces framer-motion)
+   ══════════════════════════════════════════════════════════════ */
+@keyframes turbine-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.turbine-spin {
+  animation: turbine-spin 18s linear infinite;
+}
+
+@keyframes pulse-opacity {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+.pulse-opacity {
+  animation: pulse-opacity 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes pulse-opacity-fast {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.pulse-opacity-fast {
+  animation: pulse-opacity-fast 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% { r: 29; opacity: 0; }
+  50% { r: 33; opacity: 0.25; }
+}
+.pulse-ring {
+  animation: pulse-ring 2.5s ease-out 0.5s infinite;
+}
+
+@keyframes notch-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+.notch-pulse {
+  animation: notch-pulse 2s ease-in-out infinite;
+}
+
+.logo-hover-group:hover .logo-icon-wrap {
+  transform: scale(1.08);
+}
+.logo-icon-wrap {
+  transition: transform 0.3s ease;
+}
+.logo-hover-group:hover .logo-glow {
+  opacity: 1;
+  transform: scale(1.5);
+}
+.logo-glow {
+  opacity: 0;
+  background: radial-gradient(circle, rgba(79,70,229,0.35) 0%, transparent 70%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.logo-hover-group:hover .logo-text-shift {
+  transform: translateX(3px);
+}
+.logo-text-shift {
+  transition: transform 0.2s ease;
+}
+
+/* ══════════════════════════════════════════════════════════════
    Scroll Reveal Animations
    ══════════════════════════════════════════════════════════════ */
 @keyframes fadeInUp {
