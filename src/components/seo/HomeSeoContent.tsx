@@ -34,11 +34,15 @@ export default function HomeSeoContent() {
         <a href="/us/catalog">Browse Parts Catalog</a>
         <a href="/us/ge-gas-turbine-parts">GE Gas Turbine Parts</a>
         <a href="/us/siemens-gas-turbine-parts">Siemens Gas Turbine Parts</a>
+        <a href="/us/siemens-sgt800-parts">Siemens SGT-800 Parts</a>
         <a href="/us/rolls-royce-turbine-parts">Rolls-Royce Turbine Parts</a>
         <a href="/us/solar-turbines-parts">Solar Turbines Parts</a>
         <a href="/us/ge-frame-7fa-parts">GE Frame 7FA Parts</a>
         <a href="/us/ge-frame-6b-parts">GE Frame 6B Parts</a>
         <a href="/us/ge-lm2500-parts">GE LM2500 Parts</a>
+        <a href="/us/ge-lm6000-parts">GE LM6000 Parts</a>
+        <a href="/us/ge-frame-9e-parts">GE Frame 9E Parts</a>
+        <a href="/us/rolls-royce-rb211-parts">Rolls-Royce RB211 Parts</a>
         <a href="/us/about">About Us</a>
         <a href="/us/quality">Quality Assurance</a>
         <a href="/us/rfq">Request a Quote</a>
