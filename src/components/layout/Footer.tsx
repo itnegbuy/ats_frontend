@@ -60,7 +60,7 @@ export default React.memo(function Footer() {
 
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-10">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-2 space-y-4">
             <div className="inline-flex items-center justify-center bg-white rounded-2xl p-4 w-fit">
@@ -124,6 +124,24 @@ export default React.memo(function Footer() {
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Parts by OEM */}
+          <div>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Parts by OEM</h3>
+            <ul className="space-y-2.5">
+              <li><Link href="/ge-gas-turbine-parts" className="text-sm hover:text-orange transition-colors">GE Parts</Link></li>
+              <li><Link href="/ge-frame-7fa-parts" className="text-sm hover:text-orange transition-colors">GE Frame 7FA</Link></li>
+              <li><Link href="/ge-frame-6b-parts" className="text-sm hover:text-orange transition-colors">GE Frame 6B</Link></li>
+              <li><Link href="/ge-frame-9e-parts" className="text-sm hover:text-orange transition-colors">GE Frame 9E</Link></li>
+              <li><Link href="/ge-lm2500-parts" className="text-sm hover:text-orange transition-colors">GE LM2500</Link></li>
+              <li><Link href="/ge-lm6000-parts" className="text-sm hover:text-orange transition-colors">GE LM6000</Link></li>
+              <li><Link href="/siemens-gas-turbine-parts" className="text-sm hover:text-orange transition-colors">Siemens Parts</Link></li>
+              <li><Link href="/siemens-sgt800-parts" className="text-sm hover:text-orange transition-colors">Siemens SGT-800</Link></li>
+              <li><Link href="/rolls-royce-turbine-parts" className="text-sm hover:text-orange transition-colors">Rolls-Royce Parts</Link></li>
+              <li><Link href="/rolls-royce-rb211-parts" className="text-sm hover:text-orange transition-colors">RR RB211</Link></li>
+              <li><Link href="/solar-turbines-parts" className="text-sm hover:text-orange transition-colors">Solar Turbines</Link></li>
             </ul>
           </div>
 
