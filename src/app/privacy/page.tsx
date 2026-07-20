@@ -357,10 +357,10 @@ contact@aeroturbinespare.com
                     <p>
                       Phone:{' '}
                       <a
-                        href="tel:+919354764587"
+                        href="tel:+31611879800"
                         className="text-orange hover:underline"
                       >
-                        +91 9354764587
+                        +31611879800
                       </a>
                     </p>
                   </div>

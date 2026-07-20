@@ -29,7 +29,7 @@ export const siteConfig = {
     zip: '33126',
     country: 'US',
   },
-  phone: '+919354764587',
+  phone: '+31611879800',
   email: 'sales@aeroturbinespare.com',
   cageCode: '8ATR9',
   certifications: ['ISO 9001:2015', 'AS9120 Rev B'],
@@ -223,7 +223,7 @@ export const HOMEPAGE_FAQ = [
   },
   {
     question: 'What is your AOG (Aircraft on Ground) response time?',
-    answer: 'Our AOG priority response team is available 24/7. Flag your RFQ as urgent, and we escalate to our rapid-response team for a 4-hour turnaround. Call our AOG emergency line at +91 9354764587 for immediate assistance.',
+    answer: 'Our AOG priority response team is available 24/7. Flag your RFQ as urgent, and we escalate to our rapid-response team for a 4-hour turnaround. Call our AOG emergency line at +31611879800 for immediate assistance.',
   },
   {
     question: 'Do you provide traceability documentation with parts?',

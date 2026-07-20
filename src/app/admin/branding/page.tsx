@@ -537,7 +537,7 @@ export default function BrandingPage() {
                   type="text"
                   value={draft.chat.whatsappNumber}
                   onChange={(e) => setDraft((d) => ({ ...d, chat: { ...d.chat, whatsappNumber: e.target.value } }))}
-                  placeholder="+17138425500"
+                  placeholder="+31611879800"
                   className="w-full border border-[#E8EDF2] rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4F46E5]"
                 />
               </div>

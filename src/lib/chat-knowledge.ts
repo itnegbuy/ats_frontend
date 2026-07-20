@@ -29,7 +29,7 @@ const DEFAULT_KB: KnowledgeBaseItem[] = [
     id: 'kb-3',
     category: 'contact',
     question: 'What is your phone number and email?',
-    answer: 'You can reach us at:\n\n📞 **Phone:** +91 9354764587\n📧 **RFQ Email:** sales@aeroturbinespare.com\n📧 **General Inquiries:** contact@aeroturbinespare.com\n📧 **Quality:** support@aeroturbinespare.com\n\n📍 **Address:** 1360-1362 NW 78th Ave, Doral, FL 33126, USA\n\nWe offer 24/7 support for AOG (Aircraft on Ground) emergencies.',
+    answer: 'You can reach us at:\n\n📞 **Phone:** +31611879800\n📧 **RFQ Email:** sales@aeroturbinespare.com\n📧 **General Inquiries:** contact@aeroturbinespare.com\n📧 **Quality:** support@aeroturbinespare.com\n\n📍 **Address:** 1360-1362 NW 78th Ave, Doral, FL 33126, USA\n\nWe offer 24/7 support for AOG (Aircraft on Ground) emergencies.',
     keywords: ['phone', 'email', 'contact', 'call', 'address', 'location', 'reach'],
     priority: 7,
     isActive: true,

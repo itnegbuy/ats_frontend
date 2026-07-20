@@ -362,10 +362,10 @@ export default async function AboutPage({ params }: { params: Promise<{ country:
                     <li className="flex items-center gap-3 text-sm">
                       <Phone className="w-5 h-5 text-orange flex-shrink-0" />
                       <a
-                        href="tel:+919354764587"
+                        href="tel:+31611879800"
                         className="text-text hover:text-orange transition-colors font-medium"
                       >
-                        +91 9354764587
+                        +31611879800
                       </a>
                     </li>
                     <li className="flex items-center gap-3 text-sm">
@@ -399,7 +399,7 @@ contact@aeroturbinespare.com
                   </dl>
                   <div className="mt-4 flex items-center gap-2 text-xs text-success font-semibold">
                     <span className="w-2 h-2 rounded-full bg-success" />
-                    AOG Emergency Line: 24/7 at +91 9354764587 ext. 9
+                    AOG Emergency Line: 24/7 at +31611879800
                   </div>
                 </div>
               </div>

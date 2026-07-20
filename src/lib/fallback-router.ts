@@ -1021,7 +1021,7 @@ function getDefaultSiteConfig(): SiteConfig {
     greetingMessage: 'Hello! Welcome to AeroTurbineSpare. How can I help you today?',
     whatsappEnabled: true,
     whatsappMode: 'normal',
-    whatsappNumber: '+17138425500',
+    whatsappNumber: '+31611879800',
     whatsappBusinessPhoneId: '',
     whatsappBusinessAccountId: '',
     whatsappBusinessToken: '',

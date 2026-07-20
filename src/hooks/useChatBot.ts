@@ -114,7 +114,7 @@ export function useChatBot() {
         reply = buildMessage(
           `Great! Let's get you started with a quote.\n\n` +
           `👉 [Click here to submit an RFQ](/rfq)\n\n` +
-          `You can also email your requirements to **sales@aeroturbinespare.com** or call us at **+91 9354764587** for immediate assistance.`,
+          `You can also email your requirements to **sales@aeroturbinespare.com** or call us at **+31611879800** for immediate assistance.`,
           [
             { label: '🚀 Go to RFQ Page', payload: 'Open RFQ page' },
             { label: '📞 Call Now', payload: 'Call AeroTurbineSpare' },
@@ -141,7 +141,7 @@ export function useChatBot() {
 
       case 'contact_info':
         reply = buildMessage(
-          `📞 **Phone:** +91 9354764587\n` +
+          `📞 **Phone:** +31611879800\n` +
           `📧 **RFQ:** sales@aeroturbinespare.com\n` +
           `📧 **General:** contact@aeroturbinespare.com\n` +
           `📧 **Quality:** support@aeroturbinespare.com\n\n` +
@@ -149,7 +149,7 @@ export function useChatBot() {
           `⏰ **Support Hours:** 24/7 for AOG emergencies\n` +
           `📋 **Quote Response:** Within 24 business hours`,
           [
-            { label: '📞 Call Now', payload: 'Call +91 9354764587' },
+            { label: '📞 Call Now', payload: 'Call +31611879800' },
             { label: '📝 Submit RFQ', payload: 'How do I request a quote?' },
           ],
         );
@@ -176,11 +176,11 @@ export function useChatBot() {
         reply = buildMessage(
           `⚡ **Urgent Part Needed?**\n\n` +
           `We offer **24/7 AOG (Aircraft on Ground) support.**\n\n` +
-          `📞 **Call our emergency line:** **+91 9354764587**\n\n` +
+          `📞 **Call our emergency line:** **+31611879800**\n\n` +
           `Or submit an urgent RFQ and we'll respond within **4 hours**:\n\n` +
           `👉 [Submit Urgent RFQ](/rfq?urgency=urgent)`,
           [
-            { label: '📞 Call Now', payload: 'Call +91 9354764587' },
+            { label: '📞 Call Now', payload: 'Call +31611879800' },
             { label: '🚀 Urgent RFQ', payload: 'Submit urgent RFQ' },
           ],
         );
@@ -239,11 +239,11 @@ export function useChatBot() {
       case 'human_handoff':
         reply = buildMessage(
           `I'll connect you with our team. In the meantime, you can:\n\n` +
-          `📞 **Call us:** +91 9354764587\n` +
+          `📞 **Call us:** +31611879800\n` +
           `📧 **Email us:** contact@aeroturbinespare.com\n\n` +
           `Our team typically responds within **2-4 hours** during business hours.`,
           [
-            { label: '📞 Call Now', payload: 'Call +91 9354764587' },
+            { label: '📞 Call Now', payload: 'Call +31611879800' },
             { label: '📧 Send Email', payload: 'Send email' },
             { label: '📝 Submit RFQ', payload: 'How do I request a quote?' },
           ],
@@ -259,7 +259,7 @@ export function useChatBot() {
         } else {
           reply = buildMessage(
             `I'm not sure I understand. Let me connect you with our team, or you can try one of these options:\n\n` +
-            `📞 **Call us:** +91 9354764587\n`,
+            `📞 **Call us:** +31611879800\n`,
             DEFAULT_SUGGESTIONS,
           );
         }

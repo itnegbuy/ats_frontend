@@ -19,11 +19,11 @@ export default function FloatingContactButton() {
       {showMenu && (
         <div className="flex flex-col gap-2 animate-in slide-in-from-bottom-4 duration-200">
           <a
-            href="tel:+919354764587"
+            href="tel:+31611879800"
             className="flex items-center gap-3 bg-white shadow-lg rounded-full pl-4 pr-5 py-3 hover:shadow-xl transition-all border border-gray-100 group"
           >
             <Phone className="w-5 h-5 text-green-500" />
-            <span className="text-sm font-semibold text-gray-800">+91 9354764587</span>
+            <span className="text-sm font-semibold text-gray-800">+31611879800</span>
           </a>
           <a
             href="mailto:sales@aeroturbinespare.com?subject=Gas%20Turbine%20Parts%20Inquiry&body=Hi%20AeroTurbineSpare%20Team%2C%0A%0AI%20need%20a%20quote%20for%3A%0A%0APart%20Number%3A%0AQuantity%3A%0A%0AThank%20you."
@@ -33,7 +33,7 @@ export default function FloatingContactButton() {
             <span className="text-sm font-semibold text-white">Send Email</span>
           </a>
           <a
-            href="https://wa.me/919354764587?text=Hi%20AeroTurbineSpare!%20I%20need%20a%20quote%20for%20gas%20turbine%20parts."
+            href="https://wa.me/31611879800?text=Hi%20AeroTurbineSpare!%20I%20need%20a%20quote%20for%20gas%20turbine%20parts."
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 bg-[#25D366] shadow-lg rounded-full pl-4 pr-5 py-3 hover:shadow-xl transition-all group"

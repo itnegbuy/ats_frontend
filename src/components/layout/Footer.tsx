@@ -48,7 +48,7 @@ export default React.memo(function Footer() {
             <div className="text-white/85 text-sm">Our team is available 24/7. Get a quote within hours.</div>
           </div>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
-            <a href="tel:+919354764587" className="inline-flex items-center justify-center gap-2 bg-white text-orange font-semibold px-5 py-2.5 rounded-lg hover:bg-white/90 transition-colors text-sm flex-1 sm:flex-none">
+            <a href="tel:+31611879800" className="inline-flex items-center justify-center gap-2 bg-white text-orange font-semibold px-5 py-2.5 rounded-lg hover:bg-white/90 transition-colors text-sm flex-1 sm:flex-none">
               <Phone className="w-4 h-4" /> Call Now
             </a>
             <Link href="/rfq?urgency=urgent" className="inline-flex items-center justify-center gap-2 bg-navy text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-navy-dark transition-colors text-sm flex-1 sm:flex-none">
@@ -79,8 +79,8 @@ export default React.memo(function Footer() {
             </div>
             {/* Contact */}
             <div className="space-y-2 pt-2">
-              <a href="tel:+919354764587" className="flex items-center gap-2 text-sm hover:text-orange transition-colors">
-                <Phone className="w-4 h-4 text-orange flex-shrink-0" /> +91 8304784587
+              <a href="tel:+31611879800" className="flex items-center gap-2 text-sm hover:text-orange transition-colors">
+                <Phone className="w-4 h-4 text-orange flex-shrink-0" /> +31611879800
               </a>
               <a href="mailto:sales@aeroturbinespare.com" className="flex items-center gap-2 text-sm hover:text-orange transition-colors">
                 <Mail className="w-4 h-4 text-orange flex-shrink-0" /> sales@aeroturbinespare.com

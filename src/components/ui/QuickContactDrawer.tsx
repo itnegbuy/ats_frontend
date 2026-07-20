@@ -89,7 +89,7 @@ export default function QuickContactDrawer() {
       <p className="text-lg font-bold text-white mb-1">Thank You!</p>
       <p className="text-sm text-white/60 mb-6">We have received your message and will respond within 24 hours.</p>
       <p className="text-xs text-white/40">
-        Meanwhile, call us at <a href="tel:+919354764587" className="text-[#818CF8] hover:underline">+91 9354764587</a>
+        Meanwhile, call us at <a href="tel:+31611879800" className="text-[#818CF8] hover:underline">+31611879800</a>
       </p>
     </div>
   ) : (
@@ -116,13 +116,13 @@ export default function QuickContactDrawer() {
         </button>
       </form>
       <div className="flex items-center justify-center gap-4 mt-4 text-[10px] text-white/40">
-        <a href="tel:+919354764587" className="flex items-center gap-1 hover:text-white/60 transition-colors">
+        <a href="tel:+31611879800" className="flex items-center gap-1 hover:text-white/60 transition-colors">
           <Phone className="w-3 h-3" /> Call
         </a>
         <a href="mailto:sales@aeroturbinespare.com" className="flex items-center gap-1 hover:text-white/60 transition-colors">
           <Mail className="w-3 h-3" /> Email
         </a>
-        <a href="https://wa.me/919354764587?text=Hi%20AeroTurbineSpare!%20I%20need%20a%20quote%20for%20gas%20turbine%20parts." target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-white/60 transition-colors">
+        <a href="https://wa.me/31611879800?text=Hi%20AeroTurbineSpare!%20I%20need%20a%20quote%20for%20gas%20turbine%20parts." target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-white/60 transition-colors">
           <MessageCircle className="w-3 h-3 text-[#25D366]" /> WhatsApp
         </a>
       </div>

@@ -189,10 +189,10 @@ export default function ContactPage() {
                     <div className="flex items-center gap-3 text-sm">
                       <Phone className="w-5 h-5 text-orange flex-shrink-0" />
                       <a
-                        href="tel:+919354764587"
+                        href="tel:+31611879800"
                         className="text-text hover:text-orange transition-colors font-medium"
                       >
-                        +91 9354764587
+                        +31611879800
                       </a>
                     </div>
                     <div className="flex items-center gap-3 text-sm">
@@ -245,11 +245,11 @@ export default function ContactPage() {
                     of the day or night.
                   </p>
                   <a
-                    href="tel:+919354764587"
+                    href="tel:+31611879800"
                     className="inline-flex items-center gap-2 bg-white text-orange font-bold px-4 py-2 rounded-lg text-sm hover:bg-white/90 transition-colors"
                   >
                     <Phone className="w-4 h-4" />
-                    +91 9354764587
+                    +31611879800
                   </a>
                 </div>
               </div>

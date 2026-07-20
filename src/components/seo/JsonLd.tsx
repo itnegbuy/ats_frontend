@@ -11,7 +11,7 @@ const organizationSchema = {
   areaServed: ['United States', 'Russia', 'United Kingdom', 'Germany', 'France', 'UAE', 'Saudi Arabia', 'India', 'China', 'Japan', 'South Korea', 'Brazil', 'Australia', 'Canada', 'Italy', 'Spain', 'Netherlands', 'Qatar', 'Kuwait', 'Oman', 'Bahrain', 'Egypt', 'Turkey', 'Singapore', 'Malaysia', 'Indonesia', 'Thailand', 'Vietnam', 'Philippines', 'Mexico', 'Argentina', 'Colombia', 'Chile', 'Peru', 'South Africa', 'Nigeria', 'Kenya', 'Morocco', 'Poland', 'Sweden', 'Norway', 'Denmark', 'Finland', 'Czech Republic', 'Romania', 'Ukraine', 'Israel', 'Jordan', 'Lebanon', 'Pakistan', 'Bangladesh', 'Sri Lanka', 'New Zealand'],
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+919354764587',
+    telephone: '+31611879800',
     contactType: 'sales',
     areaServed: 'Worldwide',
     availableLanguage: ['English', 'Hindi', 'Arabic', 'Russian'],
@@ -157,7 +157,7 @@ const localBusinessSchema = {
   name: 'AeroTurbineSpare',
   image: `${siteUrl}/logo.png`,
   url: siteUrl,
-  telephone: '+919354764587',
+  telephone: '+31611879800',
   email: 'sales@aeroturbinespare.com',
   address: {
     '@type': 'PostalAddress',
@@ -278,7 +278,7 @@ export function ContactPageJsonLd() {
       url: siteUrl,
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+919354764587',
+        telephone: '+31611879800',
         contactType: 'sales',
         email: 'sales@aeroturbinespare.com',
         areaServed: 'Worldwide',

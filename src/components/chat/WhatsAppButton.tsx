@@ -18,7 +18,7 @@ function WhatsAppSvg({ className }: { className?: string }) {
 }
 
 export default function WhatsAppButton({ number }: WhatsAppButtonProps) {
-  const cleanNumber = (number || '+91 9354764587').replace(/[^0-9]/g, '');
+  const cleanNumber = (number || '+31611879800').replace(/[^0-9]/g, '');
   const message = encodeURIComponent('Hello! I need help with aerospace parts.');
 
   const handleClick = () => {

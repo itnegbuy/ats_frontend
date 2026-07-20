@@ -12,7 +12,7 @@ const SYSTEM_PROMPT = `You are AeroBot, an AI assistant for AeroTurbineSpare, a 
 
 Company info:
 - Name: AeroTurbineSpare
-- Phone: +91 9354764587
+- Phone: +31611879800
 - Email: sales@aeroturbinespare.com
 - Address: 1360-1362 NW 78th Ave, Doral, FL 33126, USA
 - Certifications: ISO 9001, AS9120B
