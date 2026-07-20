@@ -12,7 +12,7 @@ const CONTENT_MANAGER_BLOCKED = ['/dashboard/settings', '/dashboard/users'];
 const STATIC_PREFIXES = ['/_next', '/api', '/favicon', '/images', '/og-image', '/logo', '/assets', '/data', '/sw.js', '/manifest.webmanifest', '/robots', '/sitemap', '/llms'];
 const NO_COUNTRY_PAGES = ['/login', '/register', '/unauthorized', '/categories'];
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // www → non-www redirect (canonicalization)
