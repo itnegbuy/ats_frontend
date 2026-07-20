@@ -3,7 +3,7 @@ import type { NextConfig } from 'next';
 let nextConfig: NextConfig = {
   productionBrowserSourceMaps: true,
   experimental: {
-    turbopackFileSystemCacheForDev: true,
+    turbopackFileSystemCacheForDev: false,
   },
   images: {
     formats: ['image/avif', 'image/webp'],
