@@ -4,19 +4,17 @@ import { useState, useEffect, useRef } from 'react';
 import { X, Send, Check, ChevronLeft, MessageCircle, Phone, Mail } from 'lucide-react';
 import toast from 'react-hot-toast';
 
-const SKIP_AUTO_KEY = 'qc_manual_open';
-
 export default function QuickContactDrawer() {
   const [mode, setMode] = useState<'closed' | 'center' | 'side'>('closed');
   const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
   const [sending, setSending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const lastActionRef = useRef(Date.now());
+  const manuallyOpenedRef = useRef(false);
 
-  // Auto-open after 1 min (only if never manually opened in this session)
+  // Auto-open after 1 min (only if never manually opened)
   useEffect(() => {
-    const alreadyManuallyOpened = sessionStorage.getItem(SKIP_AUTO_KEY);
-    if (alreadyManuallyOpened) return;
+    if (manuallyOpenedRef.current) return;
 
     const timer = setTimeout(() => {
       setMode('center');
@@ -75,7 +73,7 @@ export default function QuickContactDrawer() {
   const handleClose = () => { setMode('closed'); };
 
   const openManual = () => {
-    sessionStorage.setItem(SKIP_AUTO_KEY, 'true');
+    manuallyOpenedRef.current = true;
     setMode('side');
     resetInactivity();
     setSubmitted(false);
